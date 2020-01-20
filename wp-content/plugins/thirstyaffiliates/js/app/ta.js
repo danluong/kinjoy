@@ -12,10 +12,8 @@ jQuery( document ).ready( function($) {
         recordLinkStatEvents : function() {
 
             // record link on normal click
-            $( 'body' ).on( 'click' , 'a' , function(e) {
-                thirstyFunctions.recordLinkStat( $(this) );
-            });
-
+            if ( thirsty_global_vars.enable_record_stats == 'yes' )
+                $( 'body' ).on( 'click' , 'a' , thirstyFunctions.recordLinkStat );
         },
 
         /**
@@ -23,31 +21,99 @@ jQuery( document ).ready( function($) {
          *
          * @since 3.0.0
          * @since 3.2.0 Removed event trigger. Added keyword variable in the AJAX trigger.
+         * @since 3.3.0 Add javascript redirect feature.
+         * @since 3.3.1 Make sure the duplicate click prevention only works on affiliate links.
+         * @since 3.3.7 Add fail script for enhanced js redirect to still work on AJAX failure.
+         * @since 3.4.0 Make sure query strings are added back when enhanced js redirect is active.
          */
-        recordLinkStat : function( $link ) {
+        recordLinkStat : function( e ) {
 
-            var href    = $link.attr( 'href' ),
+            var $link   = $(this),
+                href    = $link.attr( 'href' ),
                 linkID  = $link.data( 'linkid' ),
-                keyword = $link.text(),
-                imgsrc;
+                keyword = $link[0].innerText,
+                qs      = href ? href.split('?')[1] : '', // get the url query strings
+                imgsrc,
+                newWindow;
 
+            if ( ! keyword ) keyword = $link.text();
+
+            // if link clicked is not an affiliate link, then skip.
+            if ( ! thirstyFunctions.isThirstyLink( href ) && ! linkID ) return;
+            
+            // prevent duplicate clicks.
+            if ( $link.data( "clicked" ) ) {
+                e.preventDefault();
+                return;
+            }
+            $link.data( "clicked"  , true );
+    
             // get image filename and use it as keyword.
             if ( ! keyword && $link.find( 'img' ).length ) {
-
+    
                 imgsrc  = $link.find( 'img' ).prop( 'src' ).split('/');
                 keyword = imgsrc[ imgsrc.length - 1 ];
             }
-
-            if ( thirstyFunctions.isThirstyLink( href ) || linkID ) {
-
-                $.post( thirsty_global_vars.ajax_url , {
-                    action  : 'ta_click_data_redirect',
-                    href    : href,
-                    page    : window.location.href,
-                    link_id : linkID,
-                    keyword : keyword
-                } );
+    
+            if ( thirsty_global_vars.enable_js_redirect === 'yes' && $link.data( 'nojs' ) != true ) {
+    
+                e.preventDefault();
+    
+                if ( $link.prop( 'target' ) == '_blank' && ! thirstyFunctions.disableNewWindow() )
+                    newWindow = window.open( '' , '_blank' );
             }
+    
+            $.post( thirsty_global_vars.ajax_url , {
+                action  : 'ta_click_data_redirect',
+                href    : href,
+                page    : window.location.href,
+                link_id : linkID,
+                keyword : keyword,
+                qs      : qs
+            } , function( redirect_url ) {
+    
+                $link.data( "clicked"  , false );
+    
+                if ( thirsty_global_vars.enable_js_redirect !== 'yes' || $link.data( 'nojs' ) == true )
+                    return;
+    
+                if ( newWindow )
+                    newWindow.location.href = redirect_url ? redirect_url : href;
+                else
+                    window.location.href = redirect_url ? redirect_url : href;
+
+            } ).fail( function() {
+
+                $link.data( "clicked"  , false );
+
+                if ( thirsty_global_vars.enable_js_redirect !== 'yes' || $link.data( 'nojs' ) == true )
+                    return;
+
+                if ( newWindow )
+                    newWindow.location.href = href;
+                else
+                    window.location.href = href;
+
+            } );
+        },
+
+        /**
+         * Check if we need to disable new window for enhanced javascript redirects.
+         * This is intended to fix issue on browsing sites with FB/Messenger webview browser on iPhones.
+         * 
+         * @since 3.3.6
+         * @since 3.6 Add support for Instagram, Pinterest, Twitter, Electron and Steam.
+         */
+        disableNewWindow : function() {
+
+            var strings = [ 'FBAN' , 'MessengerForiOS' , 'FBAV' , 'Instagram' , 'Pinterest' , 'Twitter' , 'Electron' , 'Steam' ];
+
+            for ( var x in strings ) {
+                if ( navigator.userAgent.indexOf( strings[x] ) >= 0 )
+                    return true;
+            }
+
+            return false;
         },
 
         /**
@@ -77,6 +143,8 @@ jQuery( document ).ready( function($) {
          * Function to check if the loaded link is a ThirstyAffiliates link or not.
          *
          * @since 3.0.0
+         * @since 3.3.0 Add data-nojs attribute support.
+         * @since 3.3.5 Make sure href property of links available before fetching the query strings.
          */
         linkFixer : function() {
 
@@ -85,7 +153,7 @@ jQuery( document ).ready( function($) {
 
             var $allLinks = $( 'body a' ),
                 hrefs     = [],
-                href, linkClass, isShortcode, isImage, content , key;
+                href, linkClass, isShortcode, isImage , key;
 
             // fetch all links that are thirstylinks
             for ( key = 0; key < $allLinks.length; key++ ) {
@@ -116,11 +184,21 @@ jQuery( document ).ready( function($) {
 
                     for ( x in response.data ) {
 
+                        // make sure response data is valid before proceeding.
+                        if ( typeof response.data[ x ] != 'object' ) continue;
+
                         var key       = response.data[ x ][ 'key' ],
-                            qs        = $( $allLinks[ key ] ).prop( 'href' ).split('?')[1], // get the url query strings
-                            href      = ( qs ) ? response.data[ x ][ 'href' ] + '?' + qs : response.data[ x ][ 'href' ],
+                            hrefProp  = $( $allLinks[ key ] ).prop( 'href' ),
+                            qs        = hrefProp ? hrefProp.split('?')[1] : '', // get the url query strings
+                            href      = response.data[ x ][ 'href' ],
                             title     = response.data[ x ][ 'title' ],
-                            className = response.data[ x ][ 'class' ];
+                            className = response.data[ x ][ 'class' ],
+                            connector;
+
+                        if ( qs && response.data[ x ][ 'pass_qs' ] ) {
+                            connector = href.indexOf( '?' ) < 0 ? '?' : '&';
+                            href      = href + connector + qs;
+                        }
 
                         // update protocol to replace it with the one used on the site.
                         href = href.replace( 'http:' , window.location.protocol ).replace( 'https:' , window.location.protocol );
@@ -145,6 +223,10 @@ jQuery( document ).ready( function($) {
                           .prop( 'rel' , response.data[ x ][ 'rel' ] )
                           .prop( 'target' , response.data[ x ][ 'target' ] )
                           .attr( 'data-linkid' , response.data[ x ][ 'link_id' ] );
+
+                        // tag links as "nojs" to disable JS redirect for them.
+                        if ( thirsty_global_vars.enable_js_redirect === 'yes' )
+                            $( $allLinks[ key ] ).attr( 'data-nojs' , response.data[ x ][ 'nojs' ] );
 
                     }
                 }
