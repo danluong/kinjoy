@@ -33,23 +33,17 @@
 
 			// Set aria-expanded on arrow
 			var dropdownToggle = closestLi.querySelector( '.dropdown-menu-toggle' );
-			if ( 'false' === dropdownToggle.getAttribute( 'aria-expanded' ) || ! dropdownToggle.getAttribute( 'aria-expanded' ) ) {
+			if ( 'false' == dropdownToggle.getAttribute( 'aria-expanded' ) ) {
 				dropdownToggle.setAttribute( 'aria-expanded', 'true' );
 			} else {
 				dropdownToggle.setAttribute( 'aria-expanded', 'false' );
 			}
 
-			if ( closestLi.querySelector( '.sub-menu' ) ) {
-				var subMenuSelector = '.sub-menu';
-			} else {
-				var subMenuSelector = '.children';
-			}
-
 			// Open the sub-menu
 			if ( body.classList.contains( 'dropdown-click-menu-item' ) ) {
-				_this.parentNode.querySelector( subMenuSelector ).classList.toggle( 'toggled-on' );
+				_this.parentNode.querySelector( '.sub-menu' ).classList.toggle( 'toggled-on' );
 			} else if ( body.classList.contains( 'dropdown-click-arrow' ) ) {
-				closestLi.querySelector( subMenuSelector ).classList.toggle( 'toggled-on' );
+				closestLi.querySelector( '.sub-menu' ).classList.toggle( 'toggled-on' );
 			}
 		}
 
@@ -93,14 +87,9 @@
 		var closeSubMenus = function() {
 			if ( document.querySelector( 'nav ul .toggled-on' ) ) {
 				var activeSubMenus = document.querySelectorAll( 'nav ul .toggled-on' );
-				var activeDropdownToggles = document.querySelectorAll( 'nav .dropdown-menu-toggle' );
 				for ( var i = 0; i < activeSubMenus.length; i++ ) {
 					activeSubMenus[i].classList.remove( 'toggled-on' );
 					activeSubMenus[i].closest( '.sfHover' ).classList.remove( 'sfHover' );
-				}
-
-				for ( var i = 0; i < activeDropdownToggles.length; i++ ) {
-					activeDropdownToggles[i].setAttribute( 'aria-expanded', 'false' );
 				}
 			}
 		}
