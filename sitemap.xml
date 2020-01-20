@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="https://kinjoy.co/sitemap.xsl"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- Sitemap is generated on 2020-01-20 19:20:48 GMT -->
+<!-- Sitemap is generated on 2020-01-20 22:11:23 GMT -->
 	<url>
 		<loc>https://kinjoy.co/</loc>
 		<lastmod>2017-10-31T10:20+00:00</lastmod>
@@ -26,4 +26,4 @@
 		<lastmod>2017-10-31T13:32+00:00</lastmod>
 	</url>
 </urlset>
-<!-- Sitemap is served from cache -->
+<!-- Sitemap is generated for this view -->
