@@ -30,27 +30,44 @@
 	}
 } )();
 
-( function() {
-	'use strict';
+// outline.js
+// based on http://www.paciellogroup.com/blog/2012/04/how-to-remove-css-outlines-in-an-accessible-manner/
+(function(d){
 
-	if ( 'querySelector' in document && 'addEventListener' in window ) {
-		var body = document.body;
+	var style_element = d.createElement('STYLE'),
+	    dom_events = 'addEventListener' in d,
+	    add_event_listener = function(type, callback){
+			// Basic cross-browser event handling
+			if(dom_events){
+				d.addEventListener(type, callback);
+			}else{
+				d.attachEvent('on' + type, callback);
+			}
+		},
+	    set_css = function(css_text){
+			// Handle setting of <style> element contents in IE8
+			!!style_element.styleSheet ? style_element.styleSheet.cssText = css_text : style_element.innerHTML = css_text;
+		}
+	;
 
-		body.addEventListener( 'mousedown', function() {
-			body.classList.add( 'using-mouse' );
-		} );
+	d.getElementsByTagName('HEAD')[0].appendChild(style_element);
 
-		body.addEventListener( 'keydown', function() {
-			body.classList.remove( 'using-mouse' );
-		} );
-	}
-} )();
+	// Using mousedown instead of mouseover, so that previously focused elements don't lose focus ring on mouse move
+	add_event_listener('mousedown', function(){
+		set_css(':focus{outline:0}::-moz-focus-inner{border:0;}');
+	});
+
+	add_event_listener('keydown', function(){
+		set_css('');
+	});
+
+})(document);
 
 ( function() {
 	'use strict';
 
 	if ( 'querySelector' in document && 'addEventListener' in window && document.body.classList.contains( 'dropdown-hover' ) ) {
-		var navLinks = document.querySelectorAll( 'nav .main-nav ul a' );
+		var navLinks = document.querySelectorAll( 'nav ul a' );
 
 		/**
 		 * Make menu items tab accessible when using the hover dropdown type
@@ -79,58 +96,6 @@
 		for ( var i = 0; i < navLinks.length; i++ ) {
 			navLinks[i].addEventListener( 'focus', toggleFocus );
 			navLinks[i].addEventListener( 'blur', toggleFocus );
-		}
-	}
-
-	/**
-	 * Make hover dropdown touch-friendly.
-	 */
-	if ( 'ontouchend' in document.documentElement && document.body.classList.contains( 'dropdown-hover' ) ) {
-		var parentElements = document.querySelectorAll( '.sf-menu .menu-item-has-children' );
-
-		for ( var i = 0; i < parentElements.length; i++ ) {
-			parentElements[i].addEventListener( 'touchend', function( e ) {
-
-				// Bail on mobile
-				if ( this.closest( 'nav' ).classList.contains( 'toggled' ) ) {
-					return;
-				}
-
-				if ( e.touches.length === 1 || e.touches.length === 0 ) {
-					// Prevent touch events within dropdown bubbling down to document
-					e.stopPropagation();
-
-					// Toggle hover
-					if ( ! this.classList.contains( 'sfHover' ) ) {
-						// Prevent link on first touch
-						if ( e.target === this || e.target.parentNode === this || e.target.parentNode.parentNode ) {
-							e.preventDefault();
-						}
-
-						// Close other sub-menus
-						var openedSubMenus = this.closest( 'nav' ).querySelectorAll( 'ul.toggled-on' );
-						if ( openedSubMenus && ! this.closest( 'ul' ).classList.contains( 'toggled-on' ) && ! this.closest( 'li' ).classList.contains( 'sfHover' ) ) {
-							for ( var o = 0; o < openedSubMenus.length; o++ ) {
-								openedSubMenus[o].classList.remove( 'toggled-on' );
-								openedSubMenus[o].closest( 'li' ).classList.remove( 'sfHover' );
-							}
-						}
-
-						this.classList.add( 'sfHover' );
-
-						// Hide dropdown on touch outside
-						var closeDropdown,
-							thisItem = this;
-
-						document.addEventListener( 'touchend', closeDropdown = function(e) {
-							e.stopPropagation();
-
-							thisItem.classList.remove( 'sfHover' );
-							document.removeEventListener( 'touchend', closeDropdown );
-						} );
-					}
-				}
-			} );
 		}
 	}
 
