@@ -1,0 +1,24 @@
+.rll-youtube-player {position: relative;padding-bottom: 56.23%;height: 0;overflow: hidden;max-width: 100%;}
+.rll-youtube-player iframe {position: absolute;top: 0;left: 0;width: 100%;height: 100%;z-index: 100;background: 0 0;}
+.rll-youtube-player img {bottom: 0;display: block;left: 0;margin: auto;max-width: 100%;width: 100%;position: absolute;right: 0;top: 0;border: none;height: auto;cursor: pointer;-webkit-transition: .4s all;-moz-transition: .4s all;transition: .4s all;}
+.rll-youtube-player img:hover {-webkit-filter: brightness(75%);}
+.rll-youtube-player .play {height: 72px;width: 72px;left: 50%;top: 50%;margin-left: -36px;margin-top: -36px;position: absolute;background: url("https://kinjoy.co/wp-content/plugins/wp-rocket/assets/img/youtube.png") no-repeat;cursor: pointer;}
+.aawp .aawp-tb__row--highlight {background-color: #256aaf;}
+.aawp .aawp-tb__row--highlight {color: #fff;}
+.aawp .aawp-tb__row--highlight a {color: #fff;}
+.no-js img.lazyload {display: none;}
+figure.wp-block-image img.lazyloading {min-width: 150px;}
+.lazyload, .lazyloading {opacity: 0;}
+.lazyloaded {opacity: 1;transition: opacity .4s;transition-delay: 0ms;}
+.recentcomments a {display: inline !important;padding: 0 !important;margin: 0 !important;}
+.site-logo {width: 200px;padding-top: 6px;}
+.entry-title {font-size: 23px;margin-bottom: -25px;margin-top: -7px;}
+.hentry p {font-size: 19px;}
+.thrv_post_grid .tve_post .tve_pg_container {box-shadow: none;-webkit-box-shadow: none;border: none;}
+.tve_post {padding-left: 10px;padding-right: 10px;}
+.post-navigation {display: none;}
+.single .site.grid-container {max-width: 800px;}
+.hentry {margin-bottom: 10px;}
+#comments {padding-bottom: 50px;}
+.lazyload, .lazyloading {opacity: 0;}
+.lazyloaded {opacity: 1;transition: opacity .3s;}
