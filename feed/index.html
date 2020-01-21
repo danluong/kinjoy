@@ -20,6 +20,524 @@
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=5.3.2</generator>
 	<item>
+		<title>A guide to styling and making Dispatch your own</title>
+		<link>https://kinjoy.co/styling/</link>
+				<pubDate>Sun, 21 Oct 2018 20:07:51 +0000</pubDate>
+		<dc:creator><![CDATA[Dan L]]></dc:creator>
+				<category><![CDATA[Styling]]></category>
+
+		<guid isPermaLink="false">https://forum.assemblewp.com/?p=959</guid>
+				<description><![CDATA[Dispatch is a Magazine style blog for your new website. Each of its features have been designed and built using GeneratePress and WP Show Posts. ... <a title="A guide to styling and making Dispatch your own" class="read-more" href="https://kinjoy.co/styling/">Read more</a>]]></description>
+								<content:encoded><![CDATA[<p>Dispatch is a Magazine style blog for your new website. Each of its features have been designed and built using GeneratePress and WP Show Posts. As expected of a Flint Skin Site it uses Custom CSS. At over 350 lines it is recommended, but not necessary, to move the Additional CSS to a Child Theme style sheet. So lets get onto making it your own.</p>
+<h2>WP Show Posts</h2>
+<p>Without WP Show Posts plugin, this Site wouldn&#8217;t exist. Another awesome product from Tom Usborne, WP Show Posts does exactly what the title says. Anywhere and everywhere in the case of Dispatch. So much so there is a dedicated page to explain its uses <a href="https://gpsites.co/dispatch/using-wp-show-posts/">here</a>.</p>
+<hr />
+<h2>Social Icons &#8211; Desktop</h2>
+<p>The Lightweight Social Icons widget has been added to the Header Widget. It only displays on Desktop as the Widget has the <code>hide-on-mobile</code> and <code>hide-on-tablet-classes</code>.</p>
+<h3>Social Icons &#8211; Tablet and Mobile</h3>
+<p>They are also displayed in the Slideout Navigation. Using the Slideout Widget.</p>
+<h3>Social Icon Colors</h3>
+<p>Colors are changed within the widget.</p>
+<hr />
+<h2>Pagebuilders</h2>
+<h4>Can I use a page builder with Dispatch?</h4>
+<p>Yes, you can if you wish. The only rule is that you need to use the Default Template for your Pages and Posts. To create a full width blank canvas template then follow these steps:</p>
+<ol>
+<li>Appearance &gt; Elements &gt; New Layout</li>
+<li>Disable Content Title</li>
+<li>Set Page Builder Container to Contained or Full Width</li>
+<li>Set Display Rules to the Pages you need a Blank canvas on.</li>
+</ol>
+<hr />
+<h2>How do I change colors?</h2>
+<p>The majority of Volumes colors are controlled by the Customizer. There are some Elements that are part of Volumes features that require CSS. This article covers where to make those changes:</p>
+<blockquote class="wp-embedded-content" data-secret="ryL7NE50f6"><p><a href="https://gpsites.co/dispatch/how-to-change-the-custom-colors/">How to change the Custom Colors</a></p></blockquote>
+<p><iframe class="wp-embedded-content" sandbox="allow-scripts" security="restricted" src="https://gpsites.co/dispatch/how-to-change-the-custom-colors/embed/#?secret=ryL7NE50f6" data-secret="ryL7NE50f6" width="600" height="338" title="&#8220;How to change the Custom Colors&#8221; &#8212; Dispatch" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></p>
+<hr />
+<h2>Logo and Site Identity</h2>
+<p>Dispatch does not have a logo, just the Site Title.<br />
+You can change the Site Branding or add a logo via the <strong>Customizer &gt; Site Identity</strong></p>
+<hr />
+<h2>Page Layout &#8211; Container Margin</h2>
+<p>Dispatch uses the <b>Customizer &gt; Layout &gt; Container &gt; Separate Containers</b> option.<br />
+To maintain horizontal alignment the left and right padding has been removed on the desktop.</p>
+<p>The following CSS adds left and right margin to offset the padding.</p>
+<pre><code>
+@media (min-width: 769px) {
+    body {
+        margin: 0 30px;
+    }
+}
+</code></pre>
+<hr />
+<h2>Navigation</h2>
+<p>Dispatch uses the Primary Navigation for the main menu and Secondary Navigation displays post categories.The majority of their layout and styling is controlled by the Customizer. With these exceptions:</p>
+<h3>Menu underline on hover</h3>
+<p>The animated underline is set using this CSS. Changing the color of the bar is covered here:</p>
+<blockquote class="wp-embedded-content" data-secret="ryL7NE50f6"><p><a href="https://gpsites.co/dispatch/how-to-change-the-custom-colors/">How to change the Custom Colors</a></p></blockquote>
+<p><iframe class="wp-embedded-content" sandbox="allow-scripts" security="restricted" src="https://gpsites.co/dispatch/how-to-change-the-custom-colors/embed/#?secret=ryL7NE50f6" data-secret="ryL7NE50f6" width="600" height="338" title="&#8220;How to change the Custom Colors&#8221; &#8212; Dispatch" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></p>
+<h3>Secondary Navigation Location</h3>
+<p>The Secondary Nav is placed using a Hook Element as opposed to the Customizer, which is set to No Navigation. This is so the secondary navigation is dynamically placed. You will notice it doesn&#8217;t appear on the posts. It also appears below the Header Element on the front page.</p>
+<p>More information be found on that here:</p>
+<blockquote class="wp-embedded-content" data-secret="1b6RsnLtC2"><p><a href="https://gpsites.co/dispatch/hook-elements/">Hooks &#8211; Custom Theme Elements</a></p></blockquote>
+<p><iframe class="wp-embedded-content" sandbox="allow-scripts" security="restricted" src="https://gpsites.co/dispatch/hook-elements/embed/#?secret=1b6RsnLtC2" data-secret="1b6RsnLtC2" width="600" height="338" title="&#8220;Hooks &#8211; Custom Theme Elements&#8221; &#8212; Dispatch" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></p>
+<h4>I want to use the Customizer to control the navigation</h4>
+<p>Simply delete ( or Quick Edit &gt; Set to Draft and Save ) the Magazine Grid header element to revert to the normal customizer controls.</p>
+<hr />
+<h2>Blog</h2>
+<p>The majority of the Blog settings are controlled within the <strong>Customizer &gt; Layout &gt; Blog</strong>. Of course it wouldn&#8217;t be a Flint Skin site if some custom customization wasn&#8217;t done. These comprise of re-ordering the post meta layout and fixing the height of the featured image.</p>
+<p>To maintain a consistent style the Blog posts have been styled to match the WP Show Posts Plugin. You can read more here:</p>
+<p>https://gpsites.co/dispatch/wp-show-posts/</p>
+<hr />
+<h2>Single Post &#8211; Sidebar and No Sidebar</h2>
+<p>The default setting ( in the Customizer ) for the single post includes the right hand sidebar. If the sidebar is removed, like it is on this post, then the content container is narrowed for easier reading.</p>
+<p>Single posts container without sidebar are resized by this CSS:</p>
+<pre><code>
+body.no-sidebar .site-content {
+    max-width: 720px; /* Adjust the size to suit */
+    margin-left: auto;
+    margin-right: auto;
+}
+</code></pre>
+<p>Options to remove the Sidebar on a post by post basis can be done using either the disable elements module or the layout module:</p>
+<blockquote class="wp-embedded-content" data-secret="Rn3Yx8WPd2"><p><a href="https://docs.generatepress.com/article/layout-metabox-overview/">Layout Metabox Overview</a></p></blockquote>
+<p><iframe class="wp-embedded-content" sandbox="allow-scripts" security="restricted" src="https://docs.generatepress.com/article/layout-metabox-overview/embed/#?secret=Rn3Yx8WPd2" data-secret="Rn3Yx8WPd2" width="600" height="338" title="&#8220;Layout Metabox Overview&#8221; &#8212; Documentation" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></p>
+<blockquote class="wp-embedded-content" data-secret="r7kvmKXYOC"><p><a href="https://docs.generatepress.com/article/layout-element-overview/">Layout Element Overview</a></p></blockquote>
+<p><iframe class="wp-embedded-content" sandbox="allow-scripts" security="restricted" src="https://docs.generatepress.com/article/layout-element-overview/embed/#?secret=r7kvmKXYOC" data-secret="r7kvmKXYOC" width="600" height="338" title="&#8220;Layout Element Overview&#8221; &#8212; Documentation" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></p>
+<hr />
+<h2>Page Heros &#8211; Header Elements</h2>
+<p>The Hero Headers are built using the Elements module. Volumes Hero Headers are covered here:</p>
+<blockquote class="wp-embedded-content" data-secret="xxzvYoqMRT"><p><a href="https://gpsites.co/dispatch/page-and-post-heroes/">Page and Post Heroes</a></p></blockquote>
+<p><iframe class="wp-embedded-content" sandbox="allow-scripts" security="restricted" src="https://gpsites.co/dispatch/page-and-post-heroes/embed/#?secret=xxzvYoqMRT" data-secret="xxzvYoqMRT" width="600" height="338" title="&#8220;Page and Post Heroes&#8221; &#8212; Dispatch" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></p>
+<h3>Magazine Grid &#8211; Front Page</h3>
+<p>A custom WP Show Posts Grid displaying 5 posts.<br />
+More details on creating your own list for this grid and the ones used in content are covered here &#8230;&#8230; WWWW &#8230;&#8230;</p>
+<p>The Header Element contains just the WP Show Posts Shortcode. And requires these two Element Classes: <code>wpsp-grid wpsp-card</code></p>
+<h3>Single Post</h3>
+<p>The single post uses template tags for dynamically displaying the Post Title, Category, Date and Author. The Post Title is set as the H1 and it uses the featured image for its background.</p>
+<h4>Background Image Inset Shadow</h4>
+<p>To improve readability an inset shadow is cast on to the background image. This uses the Element Classes field. To add the shadow to a new page header just add the <code>overlay</code> class in that field. Likewise you can remove it from this Header Element to disable the shadow.</p>
+<h3>Archives Header</h3>
+<p>This simple header places the archive title above the secondary navigation.</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Using WP Show Posts</title>
+		<link>https://kinjoy.co/using-wp-show-posts/</link>
+				<pubDate>Wed, 10 Oct 2018 20:41:09 +0000</pubDate>
+		<dc:creator><![CDATA[Dan L]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">https://gpsites.co/dispatch/?p=1406</guid>
+				<description><![CDATA[Adding post lists and grids to your Site couldn&#8217;t be easier than with the WP Show Posts plugin. Dispatch uses the Free version to display ... <a title="Using WP Show Posts" class="read-more" href="https://kinjoy.co/using-wp-show-posts/">Read more</a>]]></description>
+								<content:encoded><![CDATA[<p>Adding post lists and grids to your Site couldn&#8217;t be easier than with the <a href="https://wpshowposts.com">WP Show Posts plugin</a>. Dispatch uses the Free version to display posts on the Front page and in the Sidebars. Of course with a little Flint Skin CSS treatment.</p>
+<p>Head off to <strong>Dashboard &gt; WP Show Posts &gt; All Lists</strong>. Within are six lists:</p>
+<ul>
+<li>Align</li>
+<li>Standard</li>
+<li>Sidebar</li>
+<li>Header</li>
+<li>Simple</li>
+<li>Simple Sidebar</li>
+</ul>
+<p>Each of them have very particular settings required to match the demo content you see here. Changing those settings may affect the way the post is displayed, and not necessarily for the better. So please work on a duplicate or make a note before changing.</p>
+<p><strong>Note:</strong> the name of the List has no relevance to the different styles displayed.</p>
+<h2>General ( and important ) information</h2>
+<p>Before we go into the detail let&#8217;s cover some basic and very important information.</p>
+<h3>Advanced Settings</h3>
+<p>For the purpose of the demo content a couple of the Lists are using Advanced Settings. First off the Standard List is using Ascending Order (Default: Descending).  Secondly the Simple List is using Offset, so it omits the first 4 posts. You may want to put these back to default if you&#8217;re not intending to replace them.</p>
+<h3>Duplicating WP Show Posts List</h3>
+<p>So we have four lists, and we want to make a new Standard list with a different category. The easiest way is to use one of the Duplicate Post plugins in the WordPress repository. Simple hey. And it works for all post types including GP Elements. Awesome. <strong>Note:</strong> When making a duplicate you are generally given two options. Clone and New Draft. I advise using the New Draft as some people have reported issues when using Clone.</p>
+<div class="wpsp-align"></div>
+<p>&nbsp;</p>
+<h2>List: Standard</h2>
+<p>This is the standard WP Show Post list that has the same custom styling applied to the GP Blog:</p>
+<style>.wp-show-posts-columns#wpsp-1275 {margin-left: -2em; }.wp-show-posts-columns#wpsp-1275 .wp-show-posts-inner {margin: 0 0 2em 2em; }</style><section id="wpsp-1275" class=" wp-show-posts-columns wp-show-posts" style=""><article class=" wp-show-posts-single post-105 post type-post status-publish format-standard has-post-thumbnail hentry category-alpha category-bravo category-charlie wpsp-col-6" itemtype="http://schema.org/CreativeWork" itemscope><div class="wp-show-posts-inner" style="">		<div class="wp-show-posts-image  wpsp-image-center ">
+			<a href="https://kinjoy.co/post-3/"  title="This Is Will Be The Title Of Your Review Or Informational Blog Post"><img width="1600" height="809" src="https://kinjoy.co/wp-content/uploads/2017/10/skyline-hero-image.png" class="attachment-full size-full wp-post-image" alt="" itemprop="image" srcset="https://kinjoy.co/wp-content/uploads/2017/10/skyline-hero-image.png 1600w, https://kinjoy.co/wp-content/uploads/2017/10/skyline-hero-image-300x152.png 300w, https://kinjoy.co/wp-content/uploads/2017/10/skyline-hero-image-768x388.png 768w, https://kinjoy.co/wp-content/uploads/2017/10/skyline-hero-image-1024x518.png 1024w" sizes="(max-width: 1600px) 100vw, 1600px" /></a>		</div>
+		<div class="wpsp-content-wrap">
+	<!-- Openeing wrapper -->						<header class="wp-show-posts-entry-header">
+							<h2 class="wp-show-posts-entry-title" itemprop="headline"><a href="https://kinjoy.co/post-3/" rel="bookmark">This Is Will Be The Title Of Your Review Or Informational Blog Post</a></h2><div class="wp-show-posts-entry-meta wp-show-posts-entry-meta-below-title post-meta-inline"><span class="wp-show-posts-posted-on wp-show-posts-meta">
+					<a href="https://kinjoy.co/post-3/" title="9:17 am" rel="bookmark"><time class="wp-show-posts-entry-date published" datetime="2017-10-30T09:17:54+00:00" itemprop="datePublished">October 30, 2017</time><time class="wp-show-posts-updated" datetime="2017-10-31T13:32:36+00:00" itemprop="dateModified">October 31, 2017</time></a>
+				</span></div>						</header><!-- .entry-header -->
+											<div class="wp-show-posts-entry-summary" itemprop="text">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed tellus at mi vehicula rutrum. Maecenas felis augue, tincidunt sed est et, blandit congue odio&#8230;.</p>
+						</div><!-- .entry-summary -->
+					<div class="wp-show-posts-entry-meta wp-show-posts-entry-meta-below-post post-meta-stack"><span class="wp-show-posts-terms wp-show-posts-meta"><a href="https://kinjoy.co/category/alpha/" rel="tag">Alpha</a>, <a href="https://kinjoy.co/category/bravo/" rel="tag">Bravo</a>, <a href="https://kinjoy.co/category/charlie/" rel="tag">Charlie</a></span></div><!-- Close WPSP Wrapper -->
+</div></div><!-- wp-show-posts-inner --></article><article class=" wp-show-posts-single post-264 post type-post status-publish format-standard has-post-thumbnail hentry category-alpha category-bravo category-charlie wpsp-col-6" itemtype="http://schema.org/CreativeWork" itemscope><div class="wp-show-posts-inner" style="">		<div class="wp-show-posts-image  wpsp-image-center ">
+			<a href="https://kinjoy.co/post-1/"  title="This Is Will Be The Title Of Your Review Or Informational Blog Post"><img width="1600" height="809" src="https://kinjoy.co/wp-content/uploads/2017/10/skyline-hero-image.png" class="attachment-full size-full wp-post-image" alt="" itemprop="image" srcset="https://kinjoy.co/wp-content/uploads/2017/10/skyline-hero-image.png 1600w, https://kinjoy.co/wp-content/uploads/2017/10/skyline-hero-image-300x152.png 300w, https://kinjoy.co/wp-content/uploads/2017/10/skyline-hero-image-768x388.png 768w, https://kinjoy.co/wp-content/uploads/2017/10/skyline-hero-image-1024x518.png 1024w" sizes="(max-width: 1600px) 100vw, 1600px" /></a>		</div>
+		<div class="wpsp-content-wrap">
+	<!-- Openeing wrapper -->						<header class="wp-show-posts-entry-header">
+							<h2 class="wp-show-posts-entry-title" itemprop="headline"><a href="https://kinjoy.co/post-1/" rel="bookmark">This Is Will Be The Title Of Your Review Or Informational Blog Post</a></h2><div class="wp-show-posts-entry-meta wp-show-posts-entry-meta-below-title post-meta-inline"><span class="wp-show-posts-posted-on wp-show-posts-meta">
+					<a href="https://kinjoy.co/post-1/" title="1:41 pm" rel="bookmark"><time class="wp-show-posts-entry-date published" datetime="2017-10-31T13:41:31+00:00" itemprop="datePublished">October 31, 2017</time><time class="wp-show-posts-updated" datetime="2017-10-31T13:44:08+00:00" itemprop="dateModified">October 31, 2017</time></a>
+				</span></div>						</header><!-- .entry-header -->
+											<div class="wp-show-posts-entry-summary" itemprop="text">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed tellus at mi vehicula rutrum. Maecenas felis augue, tincidunt sed est et, blandit congue odio&#8230;.</p>
+						</div><!-- .entry-summary -->
+					<div class="wp-show-posts-entry-meta wp-show-posts-entry-meta-below-post post-meta-stack"><span class="wp-show-posts-terms wp-show-posts-meta"><a href="https://kinjoy.co/category/alpha/" rel="tag">Alpha</a>, <a href="https://kinjoy.co/category/bravo/" rel="tag">Bravo</a>, <a href="https://kinjoy.co/category/charlie/" rel="tag">Charlie</a></span></div><!-- Close WPSP Wrapper -->
+</div></div><!-- wp-show-posts-inner --></article><article class=" wp-show-posts-single post-265 post type-post status-publish format-standard has-post-thumbnail hentry category-alpha category-bravo category-charlie wpsp-col-6" itemtype="http://schema.org/CreativeWork" itemscope><div class="wp-show-posts-inner" style="">		<div class="wp-show-posts-image  wpsp-image-center ">
+			<a href="https://kinjoy.co/post-2/"  title="This Is Will Be The Title Of Your Review Or Informational Blog Post"><img width="1600" height="809" src="https://kinjoy.co/wp-content/uploads/2017/10/skyline-hero-image.png" class="attachment-full size-full wp-post-image" alt="" itemprop="image" srcset="https://kinjoy.co/wp-content/uploads/2017/10/skyline-hero-image.png 1600w, https://kinjoy.co/wp-content/uploads/2017/10/skyline-hero-image-300x152.png 300w, https://kinjoy.co/wp-content/uploads/2017/10/skyline-hero-image-768x388.png 768w, https://kinjoy.co/wp-content/uploads/2017/10/skyline-hero-image-1024x518.png 1024w" sizes="(max-width: 1600px) 100vw, 1600px" /></a>		</div>
+		<div class="wpsp-content-wrap">
+	<!-- Openeing wrapper -->						<header class="wp-show-posts-entry-header">
+							<h2 class="wp-show-posts-entry-title" itemprop="headline"><a href="https://kinjoy.co/post-2/" rel="bookmark">This Is Will Be The Title Of Your Review Or Informational Blog Post</a></h2><div class="wp-show-posts-entry-meta wp-show-posts-entry-meta-below-title post-meta-inline"><span class="wp-show-posts-posted-on wp-show-posts-meta">
+					<a href="https://kinjoy.co/post-2/" title="1:41 pm" rel="bookmark"><time class="wp-show-posts-entry-date published" datetime="2017-10-31T13:41:54+00:00" itemprop="datePublished">October 31, 2017</time><time class="wp-show-posts-updated" datetime="2020-01-21T00:56:44+00:00" itemprop="dateModified">January 21, 2020</time></a>
+				</span></div>						</header><!-- .entry-header -->
+											<div class="wp-show-posts-entry-summary" itemprop="text">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed tellus at mi vehicula rutrum. Maecenas felis augue, tincidunt sed est et, blandit congue odio&#8230;.</p>
+						</div><!-- .entry-summary -->
+					<div class="wp-show-posts-entry-meta wp-show-posts-entry-meta-below-post post-meta-stack"><span class="wp-show-posts-terms wp-show-posts-meta"><a href="https://kinjoy.co/category/alpha/" rel="tag">Alpha</a>, <a href="https://kinjoy.co/category/bravo/" rel="tag">Bravo</a>, <a href="https://kinjoy.co/category/charlie/" rel="tag">Charlie</a></span></div><!-- Close WPSP Wrapper -->
+</div></div><!-- wp-show-posts-inner --></article><article class=" wp-show-posts-single post-1630 post type-post status-publish format-standard has-post-thumbnail hentry category-featured category-time-saving wpsp-col-6" itemtype="http://schema.org/CreativeWork" itemscope><div class="wp-show-posts-inner" style="">		<div class="wp-show-posts-image  wpsp-image-center ">
+			<a href="https://kinjoy.co/sample-post/"  title="A Sample Post with Comments"><img width="2400" height="1600" src="https://kinjoy.co/wp-content/uploads/2018/11/eduardo-sanchez-251246-unsplash.jpg" class="attachment-full size-full wp-post-image" alt="" itemprop="image" srcset="https://kinjoy.co/wp-content/uploads/2018/11/eduardo-sanchez-251246-unsplash.jpg 2400w, https://kinjoy.co/wp-content/uploads/2018/11/eduardo-sanchez-251246-unsplash-300x200.jpg 300w, https://kinjoy.co/wp-content/uploads/2018/11/eduardo-sanchez-251246-unsplash-1024x683.jpg 1024w, https://kinjoy.co/wp-content/uploads/2018/11/eduardo-sanchez-251246-unsplash-768x512.jpg 768w, https://kinjoy.co/wp-content/uploads/2018/11/eduardo-sanchez-251246-unsplash-1536x1024.jpg 1536w, https://kinjoy.co/wp-content/uploads/2018/11/eduardo-sanchez-251246-unsplash-2048x1365.jpg 2048w" sizes="(max-width: 2400px) 100vw, 2400px" /></a>		</div>
+		<div class="wpsp-content-wrap">
+	<!-- Openeing wrapper -->						<header class="wp-show-posts-entry-header">
+							<h2 class="wp-show-posts-entry-title" itemprop="headline"><a href="https://kinjoy.co/sample-post/" rel="bookmark">A Sample Post with Comments</a></h2><div class="wp-show-posts-entry-meta wp-show-posts-entry-meta-below-title post-meta-inline"><span class="wp-show-posts-posted-on wp-show-posts-meta">
+					<a href="https://kinjoy.co/sample-post/" title="12:00 am" rel="bookmark"><time class="wp-show-posts-entry-date published" datetime="2018-08-22T00:00:39+00:00" itemprop="datePublished">August 22, 2018</time></a>
+				</span></div>						</header><!-- .entry-header -->
+											<div class="wp-show-posts-entry-summary" itemprop="text">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis&#8230;</p>
+						</div><!-- .entry-summary -->
+					<div class="wp-show-posts-entry-meta wp-show-posts-entry-meta-below-post post-meta-stack"><span class="wp-show-posts-terms wp-show-posts-meta"><a href="https://kinjoy.co/category/featured/" rel="tag">Featured</a>, <a href="https://kinjoy.co/category/time-saving/" rel="tag">Time Saving</a></span></div><!-- Close WPSP Wrapper -->
+</div></div><!-- wp-show-posts-inner --></article><div class="wpsp-clear"></div></section><!-- .wp-show-posts -->
+<p>This is how the list is displayed within the Content area just by adding the WP Show Post Shortcode. Here follows the basic styling changes that have been made.</p>
+<h3>Content Wrap (WPSP Only)</h3>
+<p>Using a custom Hook Element the Post article content is now wrapped within a DIV container. This container carries a class of <code>wpsp-content-wrap</code> for styling. This wrap is present on all WP Show Posts that are output inside Dispatch.</p>
+<h3>Featured Image</h3>
+<p>The featured image has a fixed height to match the layout. This is achieved using this CSS:</p>
+<pre><code>
+.generate-columns-container article .inside-article img,  .wp-show-posts-image img {
+    height: 180px;
+    width: 100%;
+    -o-object-fit: cover !important;
+    object-fit: cover !important;
+}
+</code></pre>
+<p>You can edit the height property to suit, or remove the CSS it entirely if you want to use your own sizes.</p>
+<h3>Meta above title</h3>
+<p>This is achieved using a flex box on the Entry Header. Again this applied to the GP Blog:</p>
+<pre><code>
+.generate-columns-container article .entry-header, .wp-show-posts-entry-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+}
+</code></pre>
+<h3>Entry Title forced to 2 lines</h3>
+<p>The entry title always displays a minimum and maximum of 2 lines. This mantains the across row alignment. Again this is applied to GP Blog. The <code>ex</code> unit is used to define the number of lines visible. The lines are set by defining the <code>line-height</code> and setting the <code>height</code> to as many mutiples as you require lines. e.g up the height to 7.5ex will create three lines.</p>
+<pre><code>
+.generate-columns-container article .entry-header .entry-title, .wp-show-posts article .wp-show-posts-entry-title {
+    line-height: 2.5ex;
+    height: 5ex;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+</code></pre>
+<p>&nbsp;</p>
+<h2>List: Align</h2>
+<p>Designed for a single column list this displays the content the image to the left and content to the right. This is subtly different to just resizing the image in the WP Show Posts list settings and aligning it left. Thanks to the Content Wrap we added (above) the content will never wrap around the image. On mobile it just stacks.</p>
+<p>To add one of these your posts requires a little markup. And is done like so:</p>
+<pre><code>&lt;div class="wpsp-align"&gt;shortcode_goes_here&lt;/div&gt;</code></pre>
+<div class="wpsp-align"><style>.wp-show-posts-columns#wpsp-1279 {margin-left: -2em; }.wp-show-posts-columns#wpsp-1279 .wp-show-posts-inner {margin: 0 0 2em 2em; }</style><section id="wpsp-1279" class=" wp-show-posts" style=""><article class=" wp-show-posts-single wpsp-clearfix post-959 post type-post status-publish format-standard has-post-thumbnail hentry category-styling" itemtype="http://schema.org/CreativeWork" itemscope><div class="wp-show-posts-inner" style="">		<div class="wp-show-posts-image  wpsp-image-left ">
+			<a href="https://kinjoy.co/styling/"  title="A guide to styling and making Dispatch your own"><img width="2400" height="1600" src="https://kinjoy.co/wp-content/uploads/2018/11/juan-camilo-navia-762435-unsplash.jpg" class="attachment-full size-full wp-post-image" alt="" itemprop="image" srcset="https://kinjoy.co/wp-content/uploads/2018/11/juan-camilo-navia-762435-unsplash.jpg 2400w, https://kinjoy.co/wp-content/uploads/2018/11/juan-camilo-navia-762435-unsplash-300x200.jpg 300w, https://kinjoy.co/wp-content/uploads/2018/11/juan-camilo-navia-762435-unsplash-1024x683.jpg 1024w, https://kinjoy.co/wp-content/uploads/2018/11/juan-camilo-navia-762435-unsplash-768x512.jpg 768w, https://kinjoy.co/wp-content/uploads/2018/11/juan-camilo-navia-762435-unsplash-1536x1024.jpg 1536w, https://kinjoy.co/wp-content/uploads/2018/11/juan-camilo-navia-762435-unsplash-2048x1365.jpg 2048w" sizes="(max-width: 2400px) 100vw, 2400px" /></a>		</div>
+		<div class="wpsp-content-wrap">
+	<!-- Openeing wrapper -->						<header class="wp-show-posts-entry-header">
+							<h2 class="wp-show-posts-entry-title" itemprop="headline"><a href="https://kinjoy.co/styling/" rel="bookmark">A guide to styling and making Dispatch your own</a></h2><div class="wp-show-posts-entry-meta wp-show-posts-entry-meta-below-title post-meta-inline"><span class="wp-show-posts-posted-on wp-show-posts-meta">
+					<a href="https://kinjoy.co/styling/" title="8:07 pm" rel="bookmark"><time class="wp-show-posts-entry-date published" datetime="2018-10-21T20:07:51+00:00" itemprop="datePublished">October 21, 2018</time></a>
+				</span></div>						</header><!-- .entry-header -->
+											<div class="wp-show-posts-entry-summary" itemprop="text">
+							<p>Dispatch is a Magazine style blog for your new website. Each of its features have been designed and built using GeneratePress and WP Show Posts. As expected of a Flint Skin Site it uses Custom CSS. At over 350 lines it is recommended, but not necessary, to move the Additional CSS to a Child Theme&#8230;</p>
+						</div><!-- .entry-summary -->
+					<!-- Close WPSP Wrapper -->
+</div></div><!-- wp-show-posts-inner --><div class="wpsp-clear"></div></article><article class=" wp-show-posts-single wpsp-clearfix post-1406 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized" itemtype="http://schema.org/CreativeWork" itemscope><div class="wp-show-posts-inner" style="">		<div class="wp-show-posts-image  wpsp-image-left ">
+			<a href="https://kinjoy.co/using-wp-show-posts/"  title="Using WP Show Posts"><img width="1280" height="853" src="https://kinjoy.co/wp-content/uploads/2018/10/brick-3248755_1280.jpg" class="attachment-full size-full wp-post-image" alt="" itemprop="image" srcset="https://kinjoy.co/wp-content/uploads/2018/10/brick-3248755_1280.jpg 1280w, https://kinjoy.co/wp-content/uploads/2018/10/brick-3248755_1280-300x200.jpg 300w, https://kinjoy.co/wp-content/uploads/2018/10/brick-3248755_1280-1024x682.jpg 1024w, https://kinjoy.co/wp-content/uploads/2018/10/brick-3248755_1280-768x512.jpg 768w" sizes="(max-width: 1280px) 100vw, 1280px" /></a>		</div>
+		<div class="wpsp-content-wrap">
+	<!-- Openeing wrapper -->						<header class="wp-show-posts-entry-header">
+							<h2 class="wp-show-posts-entry-title" itemprop="headline"><a href="https://kinjoy.co/using-wp-show-posts/" rel="bookmark">Using WP Show Posts</a></h2><div class="wp-show-posts-entry-meta wp-show-posts-entry-meta-below-title post-meta-inline"><span class="wp-show-posts-posted-on wp-show-posts-meta">
+					<a href="https://kinjoy.co/using-wp-show-posts/" title="8:41 pm" rel="bookmark"><time class="wp-show-posts-entry-date published" datetime="2018-10-10T20:41:09+00:00" itemprop="datePublished">October 10, 2018</time></a>
+				</span></div>						</header><!-- .entry-header -->
+											<div class="wp-show-posts-entry-summary" itemprop="text">
+							<p>Adding post lists and grids to your Site couldn&#8217;t be easier than with the WP Show Posts plugin. Dispatch uses the Free version to display posts on the Front page and in the Sidebars. Of course with a little Flint Skin CSS treatment. Head off to Dashboard &gt; WP Show Posts &gt; All Lists. Within&#8230;</p>
+						</div><!-- .entry-summary -->
+					<!-- Close WPSP Wrapper -->
+</div></div><!-- wp-show-posts-inner --><div class="wpsp-clear"></div></article></section><!-- .wp-show-posts --></div>
+<p>&nbsp;</p>
+<h2>Lists: Sidebar</h2>
+<p>In the right had sidebar you can see the Sidebar list. This List is set to 1 column and only displays the Featured Image, Title and Category. This is designed for Widgets, a narrow column or as part of a grid (like in our next List).</p>
+<p>To add this style the Widget requires a CSS Class of:</p>
+<pre><code>wpsp-card</code></pre>
+<p>Dispatch comes with Widget Classes Plugin installed. This provides this function.</p>
+<h2></h2>
+<p>&nbsp;</p>
+<h2>List: Header</h2>
+<p>The Header list as seen on the Front Page requires a list containing only 5 posts. And can accomodate most of the content elements. Which are only displayed on the large leader post.</p>
+<p>To add this style the Header Element requires the following element classes:</p>
+<pre><code>wpsp-grid wpsp-card</code></pre>
+<h2></h2>
+<h2>List: Simple</h2>
+<p>This is output using the <code>wpsp-card</code> inserted into a containing DIV like so:</p>
+<pre><code>&lt;div class="wpsp-card"&gt;shortcode goes here&lt;/dib&gt;</code></pre>
+<p>&nbsp;</p>
+<h2>List: Simple Sidebar</h2>
+<p>Nothing fancy here,  just a list being output using the a Widget in the sidebar.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Hooks &#8211; Custom Theme Elements</title>
+		<link>https://kinjoy.co/hook-elements/</link>
+				<pubDate>Fri, 21 Sep 2018 18:21:04 +0000</pubDate>
+		<dc:creator><![CDATA[Dan L]]></dc:creator>
+				<category><![CDATA[Styling]]></category>
+		<category><![CDATA[Time Saving]]></category>
+
+		<guid isPermaLink="false">https://forum.assemblewp.com/?p=942</guid>
+				<description><![CDATA[Dispatch uses a few Hook Elements to create some Custom Elements in the site. All of them provide dynamic output and should not require any ... <a title="Hooks &#8211; Custom Theme Elements" class="read-more" href="https://kinjoy.co/hook-elements/">Read more</a>]]></description>
+								<content:encoded><![CDATA[<p>Dispatch uses a few Hook Elements to create some Custom Elements in the site.<br />
+All of them provide dynamic output and should not require any changes to their content.</p>
+<p>For more info on the Hooke Element read here:</p>
+<blockquote class="wp-embedded-content" data-secret="3qXhYGElOi"><p><a href="https://docs.generatepress.com/article/hooks-element-overview/">Hooks Element Overview</a></p></blockquote>
+<p><iframe class="wp-embedded-content" sandbox="allow-scripts" security="restricted" src="https://docs.generatepress.com/article/hooks-element-overview/embed/#?secret=3qXhYGElOi" data-secret="3qXhYGElOi" width="600" height="338" title="&#8220;Hooks Element Overview&#8221; &#8212; Documentation" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></p>
+<h2>Custom Post Navigation</h2>
+<h5>Adding a custom featured image post navigation at the foot of all posts.<br />
+Please note: that the Post Navigation is disabled in the Customizer as it is not required.</h5>
+<h2>Secondary Navigation</h2>
+<p>This hook calls the Secondary Navigation and displays below the header / header element. It also uses Display Rules so it is excluded from All Posts.<br />
+Please note: the Secondary Navigation Location in the Customizer is set to No Navigation.</p>
+<h2>WPSP Open Wrapper &amp; WPSP Close Wrapper</h2>
+<p>These two hooks create a Div wrap around the Enter Header, Summary and Entry Footer of the WP Show Posts. This is used to create the custom styling you see here.</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Page and Post Heroes</title>
+		<link>https://kinjoy.co/page-and-post-heroes/</link>
+				<pubDate>Fri, 21 Sep 2018 17:48:30 +0000</pubDate>
+		<dc:creator><![CDATA[Dan L]]></dc:creator>
+				<category><![CDATA[Styling]]></category>
+
+		<guid isPermaLink="false">https://forum.assemblewp.com/?p=928</guid>
+				<description><![CDATA[Page Heroes are those big bold images and headlines you find at the top of your posts and pages. They sit just below the Site ... <a title="Page and Post Heroes" class="read-more" href="https://kinjoy.co/page-and-post-heroes/">Read more</a>]]></description>
+								<content:encoded><![CDATA[<p>Page Heroes are those big bold images and headlines you find at the top of your posts and pages. They sit just below the Site Header and added using the Header Element module, when activated provides the Elements menu in <strong>Dashboard &gt; Appearance &gt; Elements</strong></p>
+<p>Dispatch has two Header Elements in place. But you can add as many as you need.</p>
+<h2>Magazine Grid &#8211; Home Page</h2>
+<p>Combined with the WP Show Posts plugin this header creates a 5 post card grid. Very few settings are required. These are the main points:</p>
+<p><strong>Hero Content:</strong> WP Show Posts Short code<br />
+<strong>Element Classes:</strong> wpsp-grid wpsp-card<br />
+<small>This creates the grid and styles the cards</small><br />
+<strong>Padding:</strong> Zero padding<br />
+<small>Makes the grid fill the hero</small><br />
+<strong>Display Rules:</strong> Front Page</p>
+<p>The shortcode required is found in the WP Show Posts list you created. More detail on creating these special lists can be found <a href="https://gpsites.co/dispatch/using-wp-show-posts/">here</a>.</p>
+<h2>Single Post</h2>
+<p><strong>Template Tags: </strong>{{post_title}}<br />
+<strong>Element Classes:</strong>  overlay<br />
+<small>This applies a Custom CSS Inner Box Shadow overlay to improve contrast for the text content.</small><br />
+<strong>Container:</strong> Contained<br />
+<strong>Inner Container:</strong> Contained<br />
+<strong>Padding:</strong> Top: 36% and Bottom: 30px.<br />
+<small>This will keep images responsive whilst maintaining bottom spacing</small><br />
+<strong>Background Image:</strong> Featured Image<br />
+<strong>Disable Featured Image:</strong> Check<br />
+<small>This stops the featured image also being displayed in the post</small><br />
+<strong>Display Rules:</strong> All Posts</p>
+<h2>Creating new Header Elements</h2>
+<p>Creating a new Header Element is as easy as creating a new post. This article explains how to:</p>
+<blockquote class="wp-embedded-content" data-secret="NggtRTT2QT"><p><a href="https://docs.generatepress.com/article/header-element-overview/">Header Element Overview</a></p></blockquote>
+<p><iframe class="wp-embedded-content" sandbox="allow-scripts" security="restricted" src="https://docs.generatepress.com/article/header-element-overview/embed/#?secret=NggtRTT2QT" data-secret="NggtRTT2QT" width="600" height="338" title="&#8220;Header Element Overview&#8221; &#8212; Documentation" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></p>
+<h3>Display Rules</h3>
+<p>Display Rules are used to determine where a Header Element is displayed. Here are some pointers:</p>
+<h4>Front Page</h4>
+<p>When you select a blog or a static page in <strong>Dashboard &gt; Settings &gt; Reading</strong> as your Front Page. You must specifically apply that as a Display Rule for it to display.</p>
+<h4>Display the Dispatch Header Elements on other pages</h4>
+<p>Simply edit the Header Element and add additional Display Rules.</p>
+<h4>Rule Conflicts</h4>
+<p>When creating multiple Elements, it is possible to create ones where the Display Rules conflict. For example:</p>
+<p>First Element Display Rule = All Posts<br />
+Second Element Display Rule = A specific Post</p>
+<p>In this instance the First Element wins and that specific post looks like the rest of them. Its a case of the first element that was registered wins. To get round this you must use the Exclude option in the First Element so it doesn&#8217;t apply to the specific post.</p>
+<h3>Copy an existing Header Element</h3>
+<p>So you think these Header Elements are awesome. But you want to add your own versions to some other posts, and there is not duplicate feature. Well just add one of the Duplicate Post plugins found on wordpress.org and your in business.</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>How to change the Custom Colors</title>
+		<link>https://kinjoy.co/how-to-change-the-custom-colors/</link>
+				<pubDate>Fri, 21 Sep 2018 16:50:22 +0000</pubDate>
+		<dc:creator><![CDATA[Dan L]]></dc:creator>
+				<category><![CDATA[Styling]]></category>
+
+		<guid isPermaLink="false">https://forum.assemblewp.com/?p=909</guid>
+				<description><![CDATA[Changing Colors in Dispatch are mainly done via the Theme Customizer. Certain elements such as Page Heros are controlled within the Header Element and are ... <a title="How to change the Custom Colors" class="read-more" href="https://kinjoy.co/how-to-change-the-custom-colors/">Read more</a>]]></description>
+								<content:encoded><![CDATA[<p>Changing Colors in Dispatch are mainly done via the Theme Customizer. Certain elements such as Page Heros are controlled within the Header Element and are covered in that article. There are a few colors that are controlled by CSS. The rules for them are found in the <strong>Customizer > Additional CSS</strong>:</p>
+<h2>Primary Navigation</h2>
+<h3>Hairline Border above desktop navigation</h3>
+<p><code></p>
+<pre>
+.main-navigation .inside-navigation {
+    border-top: 0.5px solid #d4d7d8;
+}
+</pre>
+<p></code></p>
+<h3>Menu item underline on hover</h3>
+<p><code></p>
+<pre>
+.main-navigation ul li:after {
+    background-color: #000;
+}
+</pre>
+<p></code></p>
+<h3>Navigation Search</p>
+<h3>
+<p><code></p>
+<pre>
+.navigation-search.nav-search-active {
+    background-color: rgba(255,255,255,0.95);
+    top: 100%;
+}
+</pre>
+<p></code></p>
+<h2>Buttons</h2>
+<p>All of the colors are controlled via the customizer. However the button border inherits the color of the font. This is set by this CSS:</p>
+<p><code></p>
+<pre>
+button, html input[type="button"], input[type="reset"], input[type="submit"], a.button, a.button:visited, a.wp-block-button__link:not(.has-background) {
+    pointer-events: initial !important;
+    border-color: inherit;
+    border: 1px solid;
+}
+</pre>
+<p></code></p>
+<h2>WP Show Posts &#8211; Card Style</h2>
+<h3>Entry Title, Summary and Meta text color</h3>
+<p><code></p>
+<pre>
+.wpsp-card, .wpsp-card a, .wpsp-card .wp-show-posts-meta a, .wpsp-card .wp-show-posts-meta a:visited {
+    color: #fff;
+}
+</pre>
+<p></code></p>
+<h3>Gradient overlay</h3>
+<p>To improve contrast of text a subtle gradient overlay is applied to the cards content wrapper.</p>
+<p><code></p>
+<pre>
+.wpsp-card .wpsp-content-wrap {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5% 8%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.35);
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(80%, rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0)));
+    background: linear-gradient(0deg, rgba(80, 50, 50, 0.5) 30%, rgba(0, 0, 0, 0) 100%);
+    pointer-events: none;
+}
+</pre>
+<p></code></p>
+<h2>Custom Featured Image Post Navigation Next/Previous</h2>
+<p><code></p>
+<pre>
+.post-nav {
+    padding: 6px 12px;
+    border-radius: 3px;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    background-color: #ff1956;
+    color: #fff !important;
+}
+</pre>
+<p></code></p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Style Guide</title>
+		<link>https://kinjoy.co/style-guide/</link>
+				<pubDate>Fri, 21 Sep 2018 16:16:06 +0000</pubDate>
+		<dc:creator><![CDATA[Dan L]]></dc:creator>
+				<category><![CDATA[Styling]]></category>
+
+		<guid isPermaLink="false">https://forum.assemblewp.com/?p=895</guid>
+				<description><![CDATA[Heading One H1 Heading Two H2 Heading Three H3 Heading Four H4 Heading Five H5 Heading Six H6 Font: Playfair Playfair is a transitional design. ... <a title="Style Guide" class="read-more" href="https://kinjoy.co/style-guide/">Read more</a>]]></description>
+								<content:encoded><![CDATA[<h1>Heading One H1</h1>
+<h2>Heading Two H2</h2>
+<h3>Heading Three H3</h3>
+<h4>Heading Four H4</h4>
+<h5>Heading Five H5</h5>
+<h6>Heading Six H6</h6>
+<h4>Font: Playfair</h4>
+<p>Playfair is a transitional design. In the European Enlightenment in the late 18th century, broad nib quills were replaced by pointed steel pens as the popular writing tool of the day. Together with developments in printing technology, ink, and paper making, it became to print letterforms of high contrast and delicate hairlines that were increasingly detached from the written letterforms.</p>
+<p>This design lends itself to this period, and while it is not a revival of any particular design, it takes influence from the designs of John Baskerville and from ‘Scotch Roman’ designs. Being a Display (large size) design in the transitional genre, functionally and stylistically it can accompany Georgia for body text.</p>
+<p><a class="button" href="#">volume button</a></p>
+<h2>Color Plan</h2>
+<div style="display: flex; flex-wrap: wrap;">
+<div style="display: block; flex: 1 0 30%; height: 100px; background-color: #ff1956; color: #fff; border: 2px solid #fff; text-align: center; box-sizing: border-box;">#ff1956</div>
+<div style="display: block; flex: 1 0 70%; height: 100px; background-color: #fbfbfb; color: #3a3a3a; border: 2px solid #fff; text-align: center; box-sizing: border-box;">#fbfbfb</div>
+<div style="display: block; flex: 1 0 70%; height: 100px; background-color: #f4f6f7; color: #3a3a3a; border: 2px solid #fff; text-align: center; box-sizing: border-box;">#f4f6f7</div>
+<div style="display: block; flex: 1 0 30%; height: 100px; background-color: #3a3a3a; color: #fff; border: 2px solid #fff; text-align: center; box-sizing: border-box;">#3a3a3c</div>
+</div>
+<p>&nbsp;</p>
+<p><a class="button" href="#">volume button</a></p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Aside for Widgets</title>
+		<link>https://kinjoy.co/aside-for-widgets/</link>
+				<comments>https://kinjoy.co/aside-for-widgets/#respond</comments>
+				<pubDate>Thu, 20 Sep 2018 00:32:07 +0000</pubDate>
+		<dc:creator><![CDATA[Dan L]]></dc:creator>
+				<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">https://gpsites.co/dispatch/?p=1461</guid>
+				<description><![CDATA[Sidebar Widgets are a main feature of any Magazine Blogging site. To aid with that Dispatch uses a nifty little plugin and a couple of ... <a title="Aside for Widgets" class="read-more" href="https://kinjoy.co/aside-for-widgets/">Read more</a>]]></description>
+								<content:encoded><![CDATA[<p>Sidebar Widgets are a main feature of any Magazine Blogging site. To aid with that Dispatch uses a nifty little plugin and a couple of custom CSS classes to make styling your sidebar a breeze.</p>
+<h2>Widget CSS Classes</h2>
+<p>Using the namesake plugin you can now add CSS Classes to Widgets. Simple.</p>
+<h3>Dispatch Widget Classes</h3>
+<p><strong>CSS Class:</strong> <code>zero-padding</code><br />
+Removes the padding from the widget. Perfect for adding those banner ads for maximum space.</p>
+<p><strong>CSS Class:</strong> <code>no-background</code><br />
+Removes the widget color background that is set in the Customizer.</p>
+<p><strong>CSS Class:</strong> <code>wpsp-card</code><br />
+Used exclusively with the WP Show Posts Widget and with zero-padding and no-background.<br />
+Read more <a href="https://gpsites.co/dispatch/using-wp-show-posts/">here</a></p>
+<h3>Adding your own classes</h3>
+<p>Want different color background for your widgets. Heres how to. Add you Custom Class Name to your widget. In this example we&#8217;ll go for a red color and name our class <code>red-background</code>. Now thats added lets add some CSS.</p>
+<pre><code>
+.widget.red-background {
+    background-color: #ff0000;
+}
+</code></pre>
+]]></content:encoded>
+							<wfw:commentRss>https://kinjoy.co/aside-for-widgets/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>A Sample Post with Comments</title>
+		<link>https://kinjoy.co/sample-post/</link>
+				<comments>https://kinjoy.co/sample-post/#comments</comments>
+				<pubDate>Wed, 22 Aug 2018 00:00:39 +0000</pubDate>
+		<dc:creator><![CDATA[Dan L]]></dc:creator>
+				<category><![CDATA[Featured]]></category>
+		<category><![CDATA[Time Saving]]></category>
+
+		<guid isPermaLink="false">https://forum.assemblewp.com/?p=210</guid>
+				<description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ... <a title="A Sample Post with Comments" class="read-more" href="https://kinjoy.co/sample-post/">Read more</a>]]></description>
+								<content:encoded><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa <a href="#">a link to know where</a> qui officia deserunt mollit anim id est laborum. <a href="#">a link to know where</a></p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, style sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<h2>Great typography and bold imagery speak volumes about quintessential topics</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia <a href="#">a link to know where</a> deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <a href="#">a link to know where</a></p>
+<h3>Great typography and bold imagery speak volumes about quintessential topics</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+]]></content:encoded>
+							<wfw:commentRss>https://kinjoy.co/sample-post/feed/</wfw:commentRss>
+		<slash:comments>3</slash:comments>
+							</item>
+		<item>
 		<title>This Is Will Be The Title Of Your Review Or Informational Blog Post</title>
 		<link>https://kinjoy.co/post-2/</link>
 				<comments>https://kinjoy.co/post-2/#respond</comments>
@@ -30,7 +548,7 @@
 		<category><![CDATA[Charlie]]></category>
 
 		<guid isPermaLink="false">https://kinjoy.co/?p=265</guid>
-				<description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed tellus at mi vehicula rutrum. Maecenas felis augue, tincidunt sed est et, ... <a title="This Is Will Be The Title Of Your Review Or Informational Blog Post" class="read-more" href="https://kinjoy.co/post-2/">Read more</a>]]></description>
+				<description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed tellus at mi vehicula rutrum. Maecenas felis augue, tincidunt sed est et, blandit congue odio. ... <a title="This Is Will Be The Title Of Your Review Or Informational Blog Post" class="read-more" href="https://kinjoy.co/post-2/">Read more</a>]]></description>
 								<content:encoded><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed tellus at mi vehicula rutrum. Maecenas felis augue, tincidunt sed est et, blandit congue odio.</p>
 <p><a href="https://kinjoy.co/recommends/affiliate-product/">Vestibulum</a> ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam blandit felis ac ex iaculis, at consequat est feugiat. Vivamus pellentesque mollis arcu at luctus.</p>
 <p>Etiam suscipit urna eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
@@ -99,7 +617,7 @@
 		<category><![CDATA[Charlie]]></category>
 
 		<guid isPermaLink="false">https://kinjoy.co/?p=264</guid>
-				<description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed tellus at mi vehicula rutrum. Maecenas felis augue, tincidunt sed est et, ... <a title="This Is Will Be The Title Of Your Review Or Informational Blog Post" class="read-more" href="https://kinjoy.co/post-1/">Read more</a>]]></description>
+				<description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed tellus at mi vehicula rutrum. Maecenas felis augue, tincidunt sed est et, blandit congue odio. ... <a title="This Is Will Be The Title Of Your Review Or Informational Blog Post" class="read-more" href="https://kinjoy.co/post-1/">Read more</a>]]></description>
 								<content:encoded><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed tellus at mi vehicula rutrum. Maecenas felis augue, tincidunt sed est et, blandit congue odio.</p>
 <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam blandit felis ac ex iaculis, at consequat est feugiat. Vivamus pellentesque mollis arcu at luctus.</p>
 <p>Etiam suscipit urna eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
@@ -155,75 +673,6 @@
 <p>Nullam sollicitudin iaculis finibus. In eget pharetra tellus. Morbi mauris nibh, fermentum vitae enim sit amet, feugiat egestas dolor.</p>
 ]]></content:encoded>
 							<wfw:commentRss>https://kinjoy.co/post-1/feed/</wfw:commentRss>
-		<slash:comments>0</slash:comments>
-							</item>
-		<item>
-		<title>This Is Will Be The Title Of Your Review Or Informational Blog Post</title>
-		<link>https://kinjoy.co/post-3/</link>
-				<comments>https://kinjoy.co/post-3/#respond</comments>
-				<pubDate>Mon, 30 Oct 2017 09:17:54 +0000</pubDate>
-		<dc:creator><![CDATA[Dan L]]></dc:creator>
-				<category><![CDATA[Alpha]]></category>
-		<category><![CDATA[Bravo]]></category>
-		<category><![CDATA[Charlie]]></category>
-
-		<guid isPermaLink="false">https://kinjoy.co/?p=105</guid>
-				<description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed tellus at mi vehicula rutrum. Maecenas felis augue, tincidunt sed est et, ... <a title="This Is Will Be The Title Of Your Review Or Informational Blog Post" class="read-more" href="https://kinjoy.co/post-3/">Read more</a>]]></description>
-								<content:encoded><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed tellus at mi vehicula rutrum. Maecenas felis augue, tincidunt sed est et, blandit congue odio.</p>
-<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam blandit felis ac ex iaculis, at consequat est feugiat. Vivamus pellentesque mollis arcu at luctus.</p>
-<p>Etiam suscipit urna eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-<h2>Products Overview</h2>
-<p>Maecenas commodo, diam efficitur tincidunt feugiat, nisi arcu convallis lorem, at ultrices lorem augue vel eros. Fusce eget elementum libero.</p>
-<p>[amazon table=&#8221;15&#8243;]</p>
-<h2>Buyers Guide</h2>
-<p>Morbi ligula metus, aliquet eu facilisis vitae, congue dapibus urna. Proin velit felis, ornare et risus eu, vehicula finibus nisl. Vivamus sagittis magna in bibendum eleifend. Integer pretium mauris sit amet tempor pulvinar.</p>
-<p>Aliquam rhoncus euismod sem, sed facilisis ex varius ac. Nunc aliquet ipsum at mauris varius, ac pharetra eros feugiat. Vivamus tempus mauris ac eros posuere maximus.</p>
-<p>Praesent iaculis, sapien vel ultrices tristique, eros eros lobortis sem, id vehicula eros elit consectetur lorem. Donec volutpat elementum blandit. Sed cursus neque eu mi egestas, dictum viverra lectus semper.</p>
-<p>Aenean sapien nibh, fringilla eu mauris at, efficitur lacinia massa. Curabitur et augue consectetur, congue ipsum at, fermentum dui. Quisque justo nisl, convallis eu pharetra sit amet, dignissim vel nisl. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-<p>Ut id ante ac ante accumsan ultrices. Fusce viverra augue at nibh consectetur pharetra. Maecenas ut dignissim mauris, quis hendrerit augue.</p>
-<p>Morbi bibendum efficitur odio sed feugiat. Quisque venenatis, tellus quis rutrum finibus, augue urna bibendum purus, a euismod sem ante ut leo. Suspendisse potenti.</p>
-<p>Donec eget semper magna. Etiam a dignissim elit, dignissim aliquet massa. Phasellus lorem tellus, elementum maximus augue sit amet, faucibus dignissim justo. In quis ex velit.</p>
-<h2>Product Reviews</h2>
-<p>Nam pharetra finibus lorem, vehicula dapibus ante cursus non. Suspendisse ornare massa eget odio sodales facilisis. Praesent velit dolor, aliquet sed metus vel, euismod molestie purus.</p>
-<h3>Heading 3</h3>
-<p>Morbi convallis tincidunt urna, non cursus tellus mollis eget. Aenean vel nisl est. Vivamus eleifend, est in pulvinar varius, dui diam varius tellus, et sollicitudin lacus sem a urna.</p>
-<p>Nullam sollicitudin iaculis finibus. In eget pharetra tellus. Morbi mauris nibh, fermentum vitae enim sit amet, feugiat egestas dolor. Maecenas luctus nulla vitae ligula aliquam, ut consequat eros aliquet.</p>
-<p>[amazon box=&#8221;B01A5BN5BO&#8221;]</p>
-<h4>Heading 4</h4>
-<p>Nam pharetra finibus lorem, vehicula dapibus ante cursus non. Suspendisse ornare massa eget odio sodales facilisis. Praesent velit dolor, aliquet sed metus vel, euismod molestie purus.</p>
-<p style="text-align: center;"><strong>PROS</strong></p>
-<ul>
-<li><span>Lorem ipsum dolor sit amet</span></li>
-<li><span>Lorem ipsum dolor sit amet</span></li>
-<li><span>Lorem ipsum dolor sit amet</span></li>
-</ul>
-<p style="text-align: center;"><strong>CONS</strong></p>
-<ul>
-<li><span>Lorem ipsum dolor sit amet</span></li>
-<li><span>Lorem ipsum dolor sit amet</span></li>
-<li><span>Lorem ipsum dolor sit amet</span></li>
-</ul>
-<h5>Heading 5</h5>
-<p>Morbi convallis tincidunt urna, non cursus tellus mollis eget. Aenean vel nisl est. Vivamus eleifend, est in pulvinar varius, dui diam varius tellus, et sollicitudin lacus sem a urna.</p>
-<p>Nullam sollicitudin iaculis finibus. In eget pharetra tellus. Morbi mauris nibh, fermentum vitae enim sit amet, feugiat egestas dolor. Maecenas luctus nulla vitae ligula aliquam, ut consequat eros aliquet.</p>
-<p style="text-align: center;"><strong>We Liked</strong></p>
-<ul>
-<li><span>Lorem ipsum dolor sit amet</span></li>
-<li><span>Lorem ipsum dolor sit amet</span></li>
-<li><span>Lorem ipsum dolor sit amet</span></li>
-</ul>
-<p style="text-align: center;"><strong>We Didn&#8217;t Like</strong></p>
-<ul>
-<li><span>Lorem ipsum dolor sit amet</span></li>
-<li><span>Lorem ipsum dolor sit amet</span></li>
-<li><span>Lorem ipsum dolor sit amet</span></li>
-</ul>
-<h2>Conclusion</h2>
-<p>Nam pharetra finibus lorem, vehicula dapibus ante cursus non. Suspendisse ornare massa eget odio sodales facilisis. Praesent velit dolor, aliquet sed metus vel, euismod molestie purus.</p>
-<p>Morbi convallis tincidunt urna, non cursus tellus mollis eget. Aenean vel nisl est. Vivamus eleifend, est in pulvinar varius, dui diam varius tellus, et sollicitudin lacus sem a urna.</p>
-<p>Nullam sollicitudin iaculis finibus. In eget pharetra tellus. Morbi mauris nibh, fermentum vitae enim sit amet, feugiat egestas dolor.</p>
-]]></content:encoded>
-							<wfw:commentRss>https://kinjoy.co/post-3/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
 							</item>
 	</channel>
