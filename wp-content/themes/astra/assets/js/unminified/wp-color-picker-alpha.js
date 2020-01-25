@@ -142,6 +142,7 @@
 			 */
 			self.toggler.css({
 				'height': '24px',
+				'margin': '0 6px 6px 0',
 				'padding': '0 0 0 30px',
 				'font-size': '11px'
 			});
@@ -187,7 +188,7 @@
 						}
 						self.toggler.find( 'span.color-alpha' ).css( {
 							'width'                     : '30px',
-							'height'                    : '22px',
+							'height'                    : '24px',
 							'position'                  : 'absolute',
 							'top'                       : 0,
 							'left'                      : 0,
