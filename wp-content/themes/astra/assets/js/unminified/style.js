@@ -100,8 +100,7 @@ var astraTriggerEvent = function astraTriggerEvent( el, typeArg ) {
 
 ( function() {
 
-	var menu_toggle_all 	 = document.querySelectorAll( '.main-header-menu-toggle' );
-	var menu_click_listeners = {};
+	var menu_toggle_all 	= document.querySelectorAll( '.main-header-menu-toggle' );
 
 	/* Add break point Class and related trigger */
 	var updateHeaderBreakPoint = function () {
@@ -191,7 +190,7 @@ var astraTriggerEvent = function astraTriggerEvent( el, typeArg ) {
 	AstraToggleMenu = function( astra_menu_toggle ) {
 		console.warn('AstraToggleMenu() function has been deprecated since version 1.6.5 or above of Astra Theme and will be removed in the future. Use AstraToggleSubMenu() instead.');
 		
-		// Add Eventlisteners for Submenu.
+		// Add Eevetlisteners for Submenu.
 		if (astra_menu_toggle.length > 0) {
 			for (var i = 0; i < astra_menu_toggle.length; i++) {
 				astra_menu_toggle[i].addEventListener('click', AstraToggleSubMenu, false);
@@ -208,10 +207,7 @@ var astraTriggerEvent = function astraTriggerEvent( el, typeArg ) {
 
 				menu_toggle_all[i].setAttribute('data-index', i);
 
-				if ( ! menu_click_listeners[i] ) {
-					menu_click_listeners[i] = menu_toggle_all[i];
-					menu_toggle_all[i].addEventListener('click', astraNavMenuToggle, false);
-				}
+				menu_toggle_all[i].addEventListener('click', astraNavMenuToggle, false);
 
 				if ('undefined' !== typeof __main_header_all[i]) {
 
@@ -298,11 +294,8 @@ var astraTriggerEvent = function astraTriggerEvent( el, typeArg ) {
 	}, false);
 
 	window.addEventListener('resize', function () {
-		// Skip resize event when keyboard display event triggers on devices. 
-		if( 'INPUT' !== document.activeElement.tagName ) {
-			updateHeaderBreakPoint();
-			AstraToggleSetup();
-		}
+		updateHeaderBreakPoint();
+		AstraToggleSetup();
 	});
 
 	document.addEventListener('DOMContentLoaded', function () {
@@ -374,15 +367,13 @@ var astraTriggerEvent = function astraTriggerEvent( el, typeArg ) {
 
 	/* Hide Dropdown on body click*/
 	document.body.onclick = function( event ) {
-		if ( typeof event.target.classList !==  'undefined' ) {
-			if ( ! event.target.classList.contains( 'ast-search-menu-icon' ) && getParents( event.target, '.ast-search-menu-icon' ).length === 0 && getParents( event.target, '.ast-search-icon' ).length === 0  ) {
-				var dropdownSearchWrap = document.getElementsByClassName( 'ast-search-menu-icon' );
-				
-				for (var i = 0; i < dropdownSearchWrap.length; i++) {
-					dropdownSearchWrap[i].classList.remove( 'ast-dropdown-active' );
-				};
-			}
-		}	
+		if ( ! event.target.classList.contains( 'ast-search-menu-icon' ) && getParents( event.target, '.ast-search-menu-icon' ).length === 0 && getParents( event.target, '.ast-search-icon' ).length === 0  ) {
+            var dropdownSearchWrap = document.getElementsByClassName( 'ast-search-menu-icon' );
+            
+            for (var i = 0; i < dropdownSearchWrap.length; i++) {
+                dropdownSearchWrap[i].classList.remove( 'ast-dropdown-active' );
+            };
+        }
 	}
 	
 	/**
