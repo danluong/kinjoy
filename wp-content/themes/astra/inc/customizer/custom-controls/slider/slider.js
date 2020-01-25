@@ -1,11 +1,10 @@
-( function( $ ) {
-	/**
-	 * File slider.js
-	 *
-	 * Handles Slider control
-	 *
-	 * @package Astra
-	 */
+/**
+ * File slider.js
+ *
+ * Handles Slider control
+ *
+ * @package Astra
+ */
 
 	wp.customize.controlConstructor['ast-slider'] = wp.customize.Control.extend({
 
@@ -48,4 +47,3 @@
 			});
 		}
 	});
-})(jQuery);
