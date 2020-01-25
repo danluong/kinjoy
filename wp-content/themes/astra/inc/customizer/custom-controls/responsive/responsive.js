@@ -1,11 +1,10 @@
-( function( $ ) {
-	/**
-	 * File responsive.js
-	 *
-	 * Handles the responsive
-	 *
-	 * @package Astra
-	 */
+/**
+ * File responsive.js
+ *
+ * Handles the responsive
+ *
+ * @package Astra
+ */
 
 	wp.customize.controlConstructor['ast-responsive'] = wp.customize.Control.extend({
 
@@ -15,7 +14,7 @@
 			'use strict';
 
 			var control = this,
-			value;
+		    value;
 
 			control.astResponsiveInit();
 			
@@ -43,8 +42,6 @@
 
 			});
 
-			jQuery( '.customize-control-ast-responsive .input-wrapper input.' + 'desktop' + ', .customize-control .ast-responsive-btns > li.' + 'desktop' ).addClass( 'active' );
-
 		},
 
 		/**
@@ -55,9 +52,9 @@
 			'use strict';
 
 			var control = this,
-			newValue = {};
+		    newValue = {};
 
-			// Set the spacing container.
+		    // Set the spacing container.
 			control.responsiveContainer = control.container.find( '.ast-responsive-wrapper' ).first();
 
 			control.responsiveContainer.find( 'input.ast-responsive-input' ).each( function() {
@@ -98,7 +95,7 @@
 			});
 		},
 	});
-
+	
 	jQuery(' .wp-full-overlay-footer .devices button ').on('click', function() {
 
 		var device = jQuery(this).attr('data-device');
@@ -106,4 +103,3 @@
 		jQuery( '.customize-control-ast-responsive .input-wrapper input, .customize-control .ast-responsive-btns > li' ).removeClass( 'active' );
 		jQuery( '.customize-control-ast-responsive .input-wrapper input.' + device + ', .customize-control .ast-responsive-btns > li.' + device ).addClass( 'active' );
 	});
-})(jQuery);
