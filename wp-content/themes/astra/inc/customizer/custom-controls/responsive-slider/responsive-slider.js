@@ -1,12 +1,10 @@
-( function( $ ) {
-
-	/**
-	 * File slider.js
-	 *
-	 * Handles Slider control
-	 *
-	 * @package Astra
-	 */
+/**
+ * File slider.js
+ *
+ * Handles Slider control
+ *
+ * @package Astra
+ */
 
 	wp.customize.controlConstructor['ast-responsive-slider'] = wp.customize.Control.extend({
 
@@ -61,9 +59,9 @@
 			'use strict';
 
 			var control = this,
-			newValue = {};
+		    newValue = {};
 
-			// Set the spacing container.
+		    // Set the spacing container.
 			control.responsiveContainer = control.container.find( '.wrapper' ).first();
 
 			control.responsiveContainer.find( '.ast-responsive-range-value-input' ).each( function() {
@@ -104,5 +102,3 @@
 		jQuery( '.customize-control-ast-responsive-slider .input-field-wrapper, .customize-control .ast-responsive-slider-btns > li' ).removeClass( 'active' );
 		jQuery( '.customize-control-ast-responsive-slider .input-field-wrapper.' + device + ', .customize-control .ast-responsive-slider-btns > li.' + device ).addClass( 'active' );
 	});
-	
-})(jQuery);
