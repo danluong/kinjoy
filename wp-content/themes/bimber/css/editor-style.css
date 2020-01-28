@@ -1,0 +1,4 @@
+body#tinymce.wp-editor {max-width: 710px;margin-left: auto;margin-right: auto;font-family: sans-serif;}
+.wp-block {max-width: 662px;}
+.wp-block[data-align="wide"] {max-width: 1152px;}
+.wp-block[data-align="full"] {max-width: none;}
