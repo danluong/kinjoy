@@ -360,7 +360,7 @@ td, th {padding: 8px;text-align: left;border-width: 0 1px 1px 0;}
 input[type=email], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=url], textarea {color: #666;border: 1px solid #ccc;border-radius: 2px;-webkit-appearance: none;}
 input[type=email]:focus, input[type=password]:focus, input[type=search]:focus, input[type=tel]:focus, input[type=text]:focus, input[type=url]:focus, textarea:focus {color: #111;}
 textarea {padding-left: 3px;width: 100%;}
-.screen-reader-text {clip: rect(1px,1px,1px,1px);position: absolute !important;height: 1px;width: 1px;overflow: hidden;}
+.screen-reader-text {border: 0;clip: rect(1px,1px,1px,1px);-webkit-clip-path: inset(50%);clip-path: inset(50%);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;word-wrap: normal !important;}
 .screen-reader-text:focus {background-color: #f1f1f1;border-radius: 2px;box-shadow: 0 0 2px 2px rgba(0,0,0,.6);clip: auto !important;color: #21759b;display: block;font-size: 12.25px;font-size: .875rem;height: auto;left: 5px;line-height: normal;padding: 15px 23px 14px;text-decoration: none;top: 5px;width: auto;z-index: 100000;}
 .alignleft {display: inline;float: left;margin-right: 1.5em;}
 .alignright {display: inline;float: right;margin-left: 1.5em;}
@@ -383,7 +383,6 @@ embed, iframe, object {max-width: 100%;}
 .gallery-columns-8 .gallery-item {max-width: 12.5%;}
 .gallery-columns-9 .gallery-item {max-width: 11.11%;}
 .gallery-caption {display: block;}
-::-moz-selection {color: #fff;background: #0274be;}
 ::selection {color: #fff;background: #0274be;}
 body {-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
 body:not(.logged-in) {position: relative;}
@@ -413,6 +412,20 @@ blockquote {margin: 1.5em 1em 1.5em 3em;padding: 1.2em;font-size: 1.1em;line-hei
 .site .skip-link {background-color: #f1f1f1;box-shadow: 0 0 1px 1px rgba(0,0,0,.2);color: #21759b;display: block;font-family: Montserrat,"Helvetica Neue",sans-serif;font-size: 14px;font-weight: 700;left: -9999em;outline: 0;padding: 15px 23px 14px;text-decoration: none;text-transform: none;top: -9999em;}
 .site .skip-link:focus {clip: auto;height: auto;left: 6px;top: 7px;width: auto;z-index: 100000;}
 .logged-in .site .skip-link {box-shadow: 0 0 2px 2px rgba(0,0,0,.2);font-family: "Open Sans",sans-serif;}
+.astra-icon-down_arrow::after {content: "";font-family: Astra;}
+.astra-icon-close::after {content: "";font-family: Astra;}
+.astra-icon-drag_handle::after {content: "";font-family: Astra;}
+.astra-icon-format_align_justify::after {content: "";font-family: Astra;}
+.astra-icon-menu::after {content: "";font-family: Astra;}
+.astra-icon-reorder::after {content: "";font-family: Astra;}
+.astra-icon-search::after {content: "";font-family: Astra;}
+.astra-icon-zoom_in::after {content: "";font-family: Astra;}
+.astra-icon-check-circle::after {content: "";font-family: Astra;}
+.astra-icon-shopping-cart::after {content: "";font-family: Astra;}
+.astra-icon-shopping-bag::after {content: "";font-family: Astra;}
+.astra-icon-shopping-basket::after {content: "";font-family: Astra;}
+.astra-icon-circle-o::after {content: "";font-family: Astra;}
+.astra-icon-certificate::after {content: "";font-family: Astra;}
 input, select {line-height: 1;}
 body, button, input[type=button], input[type=submit], textarea {line-height: 1.8571428571429;}
 .site-title a {line-height: 1.2;}
