@@ -12,658 +12,751 @@
 	<atom:link href="https://kinjoy.co/feed/" rel="self" type="application/rss+xml" />
 	<link>http://kinjoy.co/</link>
 	<description>This Is An Amazon Affiliate Site!</description>
-	<lastBuildDate>Fri, 24 Jan 2020 07:33:47 +0000</lastBuildDate>
+	<lastBuildDate>Fri, 28 Jun 2019 06:26:58 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
 	1	</sy:updateFrequency>
 	<generator>https://wordpress.org/?v=5.3.2</generator>
-
-<image>
-	<url>https://kinjoy.co/wp-content/uploads/2020/01/favicon.ico</url>
-	<title>Amazon Affiliate Site</title>
-	<link>http://kinjoy.co/</link>
-	<width>32</width>
-	<height>32</height>
-</image> 
 	<item>
-		<title>A guide to styling and making Dispatch your own</title>
-		<link>https://kinjoy.co/styling/</link>
-				<pubDate>Sun, 21 Oct 2018 20:07:51 +0000</pubDate>
-		<dc:creator><![CDATA[Dan L]]></dc:creator>
-				<category><![CDATA[Styling]]></category>
+		<title>Healthy Habits &#038; Exercises for Your Pets</title>
+		<link>https://kinjoy.co/healthy-habits-exercises-for-your-pets/</link>
+				<comments>https://kinjoy.co/healthy-habits-exercises-for-your-pets/#respond</comments>
+				<pubDate>Fri, 28 Jun 2019 06:26:58 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+				<category><![CDATA[Training]]></category>
 
-		<guid isPermaLink="false">https://forum.assemblewp.com/?p=959</guid>
-				<description><![CDATA[Dispatch is a Magazine style blog for your new website. Each of its features have been designed and built using GeneratePress and WP Show Posts. ... <a title="A guide to styling and making Dispatch your own" class="read-more" href="https://kinjoy.co/styling/">Read more</a> <a class="g1-link g1-link-more" href="https://kinjoy.co/styling/">More</a>]]></description>
-								<content:encoded><![CDATA[<p>Dispatch is a Magazine style blog for your new website. Each of its features have been designed and built using GeneratePress and WP Show Posts. As expected of a Flint Skin Site it uses Custom CSS. At over 350 lines it is recommended, but not necessary, to move the Additional CSS to a Child Theme style sheet. So lets get onto making it your own.</p>
-<h2>WP Show Posts</h2>
-<p>Without WP Show Posts plugin, this Site wouldn&#8217;t exist. Another awesome product from Tom Usborne, WP Show Posts does exactly what the title says. Anywhere and everywhere in the case of Dispatch. So much so there is a dedicated page to explain its uses <a href="https://gpsites.co/dispatch/using-wp-show-posts/">here</a>.</p>
-<hr>
-<h2>Social Icons &#8211; Desktop</h2>
-<p>The Lightweight Social Icons widget has been added to the Header Widget. It only displays on Desktop as the Widget has the <code>hide-on-mobile</code> and <code>hide-on-tablet-classes</code>.</p>
-<h3>Social Icons &#8211; Tablet and Mobile</h3>
-<p>They are also displayed in the Slideout Navigation. Using the Slideout Widget.</p>
-<h3>Social Icon Colors</h3>
-<p>Colors are changed within the widget.</p>
-<hr>
-<h2>Pagebuilders</h2>
-<h4>Can I use a page builder with Dispatch?</h4>
-<p>Yes, you can if you wish. The only rule is that you need to use the Default Template for your Pages and Posts. To create a full width blank canvas template then follow these steps:</p>
-<ol>
-<li>Appearance &gt; Elements &gt; New Layout</li>
-<li>Disable Content Title</li>
-<li>Set Page Builder Container to Contained or Full Width</li>
-<li>Set Display Rules to the Pages you need a Blank canvas on.</li>
-</ol>
-<hr>
-<h2>How do I change colors?</h2>
-<p>The majority of Volumes colors are controlled by the Customizer. There are some Elements that are part of Volumes features that require CSS. This article covers where to make those changes:</p>
-<blockquote class="wp-embedded-content" data-secret="10SA3QmeQM"><p><a href="https://gpsites.co/dispatch/how-to-change-the-custom-colors/">How to change the Custom Colors</a></p></blockquote>
-<p><iframe title="&#8220;How to change the Custom Colors&#8221; &#8212; Dispatch" class="wp-embedded-content" sandbox="allow-scripts" security="restricted" style="position: absolute; clip: rect(1px, 1px, 1px, 1px);" src="https://gpsites.co/dispatch/how-to-change-the-custom-colors/embed/#?secret=10SA3QmeQM" data-secret="10SA3QmeQM" width="600" height="338" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></p>
-<hr>
-<h2>Logo and Site Identity</h2>
-<p>Dispatch does not have a logo, just the Site Title.<br />
-You can change the Site Branding or add a logo via the <strong>Customizer &gt; Site Identity</strong></p>
-<hr>
-<h2>Page Layout &#8211; Container Margin</h2>
-<p>Dispatch uses the <b>Customizer &gt; Layout &gt; Container &gt; Separate Containers</b> option.<br />
-To maintain horizontal alignment the left and right padding has been removed on the desktop.</p>
-<p>The following CSS adds left and right margin to offset the padding.</p>
-<pre><code>
-@media (min-width: 769px) {
-    body {
-        margin: 0 30px;
-    }
-}
-</code></pre>
-<hr>
-<h2>Navigation</h2>
-<p>Dispatch uses the Primary Navigation for the main menu and Secondary Navigation displays post categories.The majority of their layout and styling is controlled by the Customizer. With these exceptions:</p>
-<h3>Menu underline on hover</h3>
-<p>The animated underline is set using this CSS. Changing the color of the bar is covered here:</p>
-<blockquote class="wp-embedded-content" data-secret="10SA3QmeQM"><p><a href="https://gpsites.co/dispatch/how-to-change-the-custom-colors/">How to change the Custom Colors</a></p></blockquote>
-<p><iframe title="&#8220;How to change the Custom Colors&#8221; &#8212; Dispatch" class="wp-embedded-content" sandbox="allow-scripts" security="restricted" style="position: absolute; clip: rect(1px, 1px, 1px, 1px);" src="https://gpsites.co/dispatch/how-to-change-the-custom-colors/embed/#?secret=10SA3QmeQM" data-secret="10SA3QmeQM" width="600" height="338" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></p>
-<h3>Secondary Navigation Location</h3>
-<p>The Secondary Nav is placed using a Hook Element as opposed to the Customizer, which is set to No Navigation. This is so the secondary navigation is dynamically placed. You will notice it doesn&#8217;t appear on the posts. It also appears below the Header Element on the front page.</p>
-<p>More information be found on that here:</p>
-<blockquote class="wp-embedded-content" data-secret="8WCbKXk0gN"><p><a href="https://gpsites.co/dispatch/hook-elements/">Hooks &#8211; Custom Theme Elements</a></p></blockquote>
-<p><iframe title="&#8220;Hooks &#8211; Custom Theme Elements&#8221; &#8212; Dispatch" class="wp-embedded-content" sandbox="allow-scripts" security="restricted" style="position: absolute; clip: rect(1px, 1px, 1px, 1px);" src="https://gpsites.co/dispatch/hook-elements/embed/#?secret=8WCbKXk0gN" data-secret="8WCbKXk0gN" width="600" height="338" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></p>
-<h4>I want to use the Customizer to control the navigation</h4>
-<p>Simply delete ( or Quick Edit &gt; Set to Draft and Save ) the Magazine Grid header element to revert to the normal customizer controls.</p>
-<hr>
-<h2>Blog</h2>
-<p>The majority of the Blog settings are controlled within the <strong>Customizer &gt; Layout &gt; Blog</strong>. Of course it wouldn&#8217;t be a Flint Skin site if some custom customization wasn&#8217;t done. These comprise of re-ordering the post meta layout and fixing the height of the featured image.</p>
-<p>To maintain a consistent style the Blog posts have been styled to match the WP Show Posts Plugin. You can read more here:</p>
-<p>https://gpsites.co/dispatch/wp-show-posts/</p>
-<hr>
-<h2>Single Post &#8211; Sidebar and No Sidebar</h2>
-<p>The default setting ( in the Customizer ) for the single post includes the right hand sidebar. If the sidebar is removed, like it is on this post, then the content container is narrowed for easier reading.</p>
-<p>Single posts container without sidebar are resized by this CSS:</p>
-<pre><code>
-body.no-sidebar .site-content {
-    max-width: 720px; /* Adjust the size to suit */
-    margin-left: auto;
-    margin-right: auto;
-}
-</code></pre>
-<p>Options to remove the Sidebar on a post by post basis can be done using either the disable elements module or the layout module:</p>
-<blockquote class="wp-embedded-content" data-secret="kUinDyBqpH"><p><a href="https://docs.generatepress.com/article/layout-metabox-overview/">Layout Metabox Overview</a></p></blockquote>
-<p><iframe title="&#8220;Layout Metabox Overview&#8221; &#8212; Documentation" class="wp-embedded-content" sandbox="allow-scripts" security="restricted" style="position: absolute; clip: rect(1px, 1px, 1px, 1px);" src="https://docs.generatepress.com/article/layout-metabox-overview/embed/#?secret=kUinDyBqpH" data-secret="kUinDyBqpH" width="600" height="338" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></p>
-<blockquote class="wp-embedded-content" data-secret="tHvjwrLFu0"><p><a href="https://docs.generatepress.com/article/layout-element-overview/">Layout Element Overview</a></p></blockquote>
-<p><iframe title="&#8220;Layout Element Overview&#8221; &#8212; Documentation" class="wp-embedded-content" sandbox="allow-scripts" security="restricted" style="position: absolute; clip: rect(1px, 1px, 1px, 1px);" src="https://docs.generatepress.com/article/layout-element-overview/embed/#?secret=tHvjwrLFu0" data-secret="tHvjwrLFu0" width="600" height="338" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></p>
-<hr>
-<h2>Page Heros &#8211; Header Elements</h2>
-<p>The Hero Headers are built using the Elements module. Volumes Hero Headers are covered here:</p>
-<blockquote class="wp-embedded-content" data-secret="r1dAcFGykQ"><p><a href="https://gpsites.co/dispatch/page-and-post-heroes/">Page and Post Heroes</a></p></blockquote>
-<p><iframe title="&#8220;Page and Post Heroes&#8221; &#8212; Dispatch" class="wp-embedded-content" sandbox="allow-scripts" security="restricted" style="position: absolute; clip: rect(1px, 1px, 1px, 1px);" src="https://gpsites.co/dispatch/page-and-post-heroes/embed/#?secret=r1dAcFGykQ" data-secret="r1dAcFGykQ" width="600" height="338" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></p>
-<h3>Magazine Grid &#8211; Front Page</h3>
-<p>A custom WP Show Posts Grid displaying 5 posts.<br />
-More details on creating your own list for this grid and the ones used in content are covered here &#8230;&#8230; WWWW &#8230;&#8230;</p>
-<p>The Header Element contains just the WP Show Posts Shortcode. And requires these two Element Classes: <code>wpsp-grid wpsp-card</code></p>
-<h3>Single Post</h3>
-<p>The single post uses template tags for dynamically displaying the Post Title, Category, Date and Author. The Post Title is set as the H1 and it uses the featured image for its background.</p>
-<h4>Background Image Inset Shadow</h4>
-<p>To improve readability an inset shadow is cast on to the background image. This uses the Element Classes field. To add the shadow to a new page header just add the <code>overlay</code> class in that field. Likewise you can remove it from this Header Element to disable the shadow.</p>
-<h3>Archives Header</h3>
-<p>This simple header places the archive title above the secondary navigation.</p>
-]]></content:encoded>
-										</item>
-		<item>
-		<title>Using WP Show Posts</title>
-		<link>https://kinjoy.co/using-wp-show-posts/</link>
-				<pubDate>Wed, 10 Oct 2018 20:41:09 +0000</pubDate>
-		<dc:creator><![CDATA[Dan L]]></dc:creator>
-				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">https://websitedemos.net/pet-care-07-wip/2019/06/28/not-just-humans-need-home-copy-2/</guid>
+				<description><![CDATA[Suspendisse ac mollis sem, eget molestie ligula. Aliquam vehicula lacinia magna eget porttitor. Fusce posuere magna vitae ultricies pharetra. Sed tellus lectus, viverra sed mi ut, iaculis condimentum justo. Fusce facilisis imperdiet elit quis vulputate. Duis in tincidunt libero, in laoreet libero. 
+						]]></description>
+								<content:encoded><![CDATA[
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
 
-		<guid isPermaLink="false">https://gpsites.co/dispatch/?p=1406</guid>
-				<description><![CDATA[Adding post lists and grids to your Site couldn&#8217;t be easier than with the WP Show Posts plugin. Dispatch uses the Free version to display ... <a title="Using WP Show Posts" class="read-more" href="https://kinjoy.co/using-wp-show-posts/">Read more</a> <a class="g1-link g1-link-more" href="https://kinjoy.co/using-wp-show-posts/">More</a>]]></description>
-								<content:encoded><![CDATA[<p>Adding post lists and grids to your Site couldn&#8217;t be easier than with the <a href="https://wpshowposts.com">WP Show Posts plugin</a>. Dispatch uses the Free version to display posts on the Front page and in the Sidebars. Of course with a little Flint Skin CSS treatment.</p>
-<p>Head off to <strong>Dashboard &gt; WP Show Posts &gt; All Lists</strong>. Within are six lists:</p>
-<ul>
-<li>Align</li>
-<li>Standard</li>
-<li>Sidebar</li>
-<li>Header</li>
-<li>Simple</li>
-<li>Simple Sidebar</li>
-</ul>
-<p>Each of them have very particular settings required to match the demo content you see here. Changing those settings may affect the way the post is displayed, and not necessarily for the better. So please work on a duplicate or make a note before changing.</p>
-<p><strong>Note:</strong> the name of the List has no relevance to the different styles displayed.</p>
-<h2>General ( and important ) information</h2>
-<p>Before we go into the detail let&#8217;s cover some basic and very important information.</p>
-<h3>Advanced Settings</h3>
-<p>For the purpose of the demo content a couple of the Lists are using Advanced Settings. First off the Standard List is using Ascending Order (Default: Descending).  Secondly the Simple List is using Offset, so it omits the first 4 posts. You may want to put these back to default if you&#8217;re not intending to replace them.</p>
-<h3>Duplicating WP Show Posts List</h3>
-<p>So we have four lists, and we want to make a new Standard list with a different category. The easiest way is to use one of the Duplicate Post plugins in the WordPress repository. Simple hey. And it works for all post types including GP Elements. Awesome. <strong>Note:</strong> When making a duplicate you are generally given two options. Clone and New Draft. I advise using the New Draft as some people have reported issues when using Clone.</p>
-<div class="wpsp-align"></div>
-<p>&nbsp;</p>
-<h2>List: Standard</h2>
-<p>This is the standard WP Show Post list that has the same custom styling applied to the GP Blog:</p>
-<style>.wp-show-posts-columns#wpsp-1275 {margin-left: -2em; }.wp-show-posts-columns#wpsp-1275 .wp-show-posts-inner {margin: 0 0 2em 2em; }</style><section id="wpsp-1275" class=" wp-show-posts-columns wp-show-posts" style=""><article class=" wp-show-posts-single post-1923 post type-post status-publish format-standard has-post-thumbnail category-bimber-animals tag-bimber-monkey wpsp-col-6" itemtype="http://schema.org/CreativeWork" itemscope><div class="wp-show-posts-inner" style="">		<div class="wp-show-posts-image  wpsp-image-center ">
-			<a href="https://kinjoy.co/what-this-monkey-does-when-she-gets-hungry-is-absolutely-hilarious/"  title="What This Monkey Does When She Gets Hungry Is Absolutely Hilarious"><img width="1200" height="800" src="https://kinjoy.co/wp-content/uploads/2019/01/demo_06.jpg" class="attachment-full size-full wp-post-image" alt="" itemprop="image" /></a>		</div>
-		<div class="wpsp-content-wrap">
-	<!-- Openeing wrapper -->						<header class="wp-show-posts-entry-header">
-							<h2 class="wp-show-posts-entry-title" itemprop="headline"><a href="https://kinjoy.co/what-this-monkey-does-when-she-gets-hungry-is-absolutely-hilarious/" rel="bookmark">What This Monkey Does When She Gets Hungry Is Absolutely Hilarious</a></h2><div class="wp-show-posts-entry-meta wp-show-posts-entry-meta-below-title post-meta-inline"><span class="wp-show-posts-posted-on wp-show-posts-meta">
-					<a href="https://kinjoy.co/what-this-monkey-does-when-she-gets-hungry-is-absolutely-hilarious/" title="2:41 pm" rel="bookmark"><time class="wp-show-posts-entry-date published" datetime="2015-08-03T14:41:35+00:00" itemprop="datePublished">August 3, 2015</time></a>
-				</span></div>						</header><!-- .entry-header -->
-											<div class="wp-show-posts-entry-summary" itemprop="text">
-							<p>Sagittis efficitur ex, at sodales massa pulvinar a. Nunc quis lacinia eros. Fusce ac ipsum gravida, tristique sed felis augue dictum nec consectetuer quis. Elementum eu arcu nunc ornare nam. Vitae libero mauris suspendisse vitae purus. Ligula morbi sed diam eget dolor posuere. Convallis vel nisl nulla. <a class="g1-link g1-link-more" href="https://kinjoy.co/what-this-monkey-does-when-she-gets-hungry-is-absolutely-hilarious/">More</a></p>
-						</div><!-- .entry-summary -->
-					<div class="wp-show-posts-entry-meta wp-show-posts-entry-meta-below-post post-meta-stack"><span class="wp-show-posts-terms wp-show-posts-meta"><a href="https://kinjoy.co/category/bimber-animals/" rel="tag">Animals</a></span></div><!-- Close WPSP Wrapper -->
-</div></div><!-- wp-show-posts-inner --></article><article class=" wp-show-posts-single post-1917 post type-post status-publish format-standard has-post-thumbnail category-bimber-wtf tag-bimber-featured wpsp-col-6" itemtype="http://schema.org/CreativeWork" itemscope><div class="wp-show-posts-inner" style="">		<div class="wp-show-posts-image  wpsp-image-center ">
-			<a href="https://kinjoy.co/33-moments-so-ridiculously-awkward-you-wont-be-able-to-look-away/"  title="33 Moments So Ridiculously Awkward You Won&#8217;t Be Able to Look Away"><img width="1200" height="800" src="https://kinjoy.co/wp-content/uploads/2019/01/demo_05.jpg" class="attachment-full size-full wp-post-image" alt="" itemprop="image" /></a>		</div>
-		<div class="wpsp-content-wrap">
-	<!-- Openeing wrapper -->						<header class="wp-show-posts-entry-header">
-							<h2 class="wp-show-posts-entry-title" itemprop="headline"><a href="https://kinjoy.co/33-moments-so-ridiculously-awkward-you-wont-be-able-to-look-away/" rel="bookmark">33 Moments So Ridiculously Awkward You Won&#8217;t Be Able to Look Away</a></h2><div class="wp-show-posts-entry-meta wp-show-posts-entry-meta-below-title post-meta-inline"><span class="wp-show-posts-posted-on wp-show-posts-meta">
-					<a href="https://kinjoy.co/33-moments-so-ridiculously-awkward-you-wont-be-able-to-look-away/" title="10:13 am" rel="bookmark"><time class="wp-show-posts-entry-date published" datetime="2015-09-24T10:13:28+00:00" itemprop="datePublished">September 24, 2015</time></a>
-				</span></div>						</header><!-- .entry-header -->
-											<div class="wp-show-posts-entry-summary" itemprop="text">
-							<p>Nulla sagittis efficitur ex, at sodales massa pulvinar a. Nunc quis lacinia eros. Fusce ac ipsum gravida, tristique sed felis augue dictum nec consectetuer quis. Elementum eu arcu nunc ornare nam. Vitae libero mauris suspendisse vitae purus. Ligula morbi sed diam eget dolor posuere. Convallis vel nisl. <a class="g1-link g1-link-more" href="https://kinjoy.co/33-moments-so-ridiculously-awkward-you-wont-be-able-to-look-away/">More</a></p>
-						</div><!-- .entry-summary -->
-					<div class="wp-show-posts-entry-meta wp-show-posts-entry-meta-below-post post-meta-stack"><span class="wp-show-posts-terms wp-show-posts-meta"><a href="https://kinjoy.co/category/bimber-wtf/" rel="tag">WTF</a></span></div><!-- Close WPSP Wrapper -->
-</div></div><!-- wp-show-posts-inner --></article><article class=" wp-show-posts-single post-1912 post type-post status-publish format-standard has-post-thumbnail category-bimber-wtf tag-bimber-featured wpsp-col-6" itemtype="http://schema.org/CreativeWork" itemscope><div class="wp-show-posts-inner" style="">		<div class="wp-show-posts-image  wpsp-image-center ">
-			<a href="https://kinjoy.co/25-bizarre-black-white-movies-everyone-should-see-at-least-once/"  title="25 Bizarre Black &#038; White Movies Everyone Should See At Least Once"><img width="1200" height="800" src="https://kinjoy.co/wp-content/uploads/2019/01/demo_04.jpg" class="attachment-full size-full wp-post-image" alt="" itemprop="image" /></a>		</div>
-		<div class="wpsp-content-wrap">
-	<!-- Openeing wrapper -->						<header class="wp-show-posts-entry-header">
-							<h2 class="wp-show-posts-entry-title" itemprop="headline"><a href="https://kinjoy.co/25-bizarre-black-white-movies-everyone-should-see-at-least-once/" rel="bookmark">25 Bizarre Black &#038; White Movies Everyone Should See At Least Once</a></h2><div class="wp-show-posts-entry-meta wp-show-posts-entry-meta-below-title post-meta-inline"><span class="wp-show-posts-posted-on wp-show-posts-meta">
-					<a href="https://kinjoy.co/25-bizarre-black-white-movies-everyone-should-see-at-least-once/" title="9:43 am" rel="bookmark"><time class="wp-show-posts-entry-date published" datetime="2015-09-28T09:43:37+00:00" itemprop="datePublished">September 28, 2015</time></a>
-				</span></div>						</header><!-- .entry-header -->
-											<div class="wp-show-posts-entry-summary" itemprop="text">
-							<p>Vel nisl. Nulla sagittis efficitur ex, at sodales massa pulvinar a. Nunc quis lacinia eros. Fusce ac ipsum gravida, tristique sed felis augue dictum nec consectetuer quis. Elementum eu arcu nunc ornare nam. Vitae libero mauris suspendisse vitae purus. Ligula morbi sed diam eget dolor posuere. Convallis vel. <a class="g1-link g1-link-more" href="https://kinjoy.co/25-bizarre-black-white-movies-everyone-should-see-at-least-once/">More</a></p>
-						</div><!-- .entry-summary -->
-					<div class="wp-show-posts-entry-meta wp-show-posts-entry-meta-below-post post-meta-stack"><span class="wp-show-posts-terms wp-show-posts-meta"><a href="https://kinjoy.co/category/bimber-wtf/" rel="tag">WTF</a></span></div><!-- Close WPSP Wrapper -->
-</div></div><!-- wp-show-posts-inner --></article><article class=" wp-show-posts-single post-1921 post type-post status-publish format-standard has-post-thumbnail category-bimber-wow tag-bimber-beauty tag-bimber-cheerleading tag-bimber-featured wpsp-col-6" itemtype="http://schema.org/CreativeWork" itemscope><div class="wp-show-posts-inner" style="">		<div class="wp-show-posts-image  wpsp-image-center ">
-			<a href="https://kinjoy.co/23-photos-that-perfectly-sum-up-how-you-feel-about-cheerleading/"  title="23 Photos That Perfectly Sum up How You Feel About Cheerleading"><img width="1200" height="800" src="https://kinjoy.co/wp-content/uploads/2019/01/demo_03.jpg" class="attachment-full size-full wp-post-image" alt="" itemprop="image" /></a>		</div>
-		<div class="wpsp-content-wrap">
-	<!-- Openeing wrapper -->						<header class="wp-show-posts-entry-header">
-							<h2 class="wp-show-posts-entry-title" itemprop="headline"><a href="https://kinjoy.co/23-photos-that-perfectly-sum-up-how-you-feel-about-cheerleading/" rel="bookmark">23 Photos That Perfectly Sum up How You Feel About Cheerleading</a></h2><div class="wp-show-posts-entry-meta wp-show-posts-entry-meta-below-title post-meta-inline"><span class="wp-show-posts-posted-on wp-show-posts-meta">
-					<a href="https://kinjoy.co/23-photos-that-perfectly-sum-up-how-you-feel-about-cheerleading/" title="10:47 am" rel="bookmark"><time class="wp-show-posts-entry-date published" datetime="2015-10-03T10:47:19+00:00" itemprop="datePublished">October 3, 2015</time></a>
-				</span></div>						</header><!-- .entry-header -->
-											<div class="wp-show-posts-entry-summary" itemprop="text">
-							<p>Vel vel nisl. Nulla sagittis efficitur ex, at sodales massa pulvinar a. Nunc quis lacinia eros. Fusce ac ipsum gravida, tristique sed felis augue dictum nec consectetuer quis. Elementum eu arcu nunc ornare nam. Vitae libero mauris suspendisse vitae purus. Ligula morbi sed diam eget dolor posuere. Convallis. <a class="g1-link g1-link-more" href="https://kinjoy.co/23-photos-that-perfectly-sum-up-how-you-feel-about-cheerleading/">More</a></p>
-						</div><!-- .entry-summary -->
-					<div class="wp-show-posts-entry-meta wp-show-posts-entry-meta-below-post post-meta-stack"><span class="wp-show-posts-terms wp-show-posts-meta"><a href="https://kinjoy.co/category/bimber-wow/" rel="tag">WOW</a></span></div><!-- Close WPSP Wrapper -->
-</div></div><!-- wp-show-posts-inner --></article><div class="wpsp-clear"></div></section><!-- .wp-show-posts -->
-<p>This is how the list is displayed within the Content area just by adding the WP Show Post Shortcode. Here follows the basic styling changes that have been made.</p>
-<h3>Content Wrap (WPSP Only)</h3>
-<p>Using a custom Hook Element the Post article content is now wrapped within a DIV container. This container carries a class of <code>wpsp-content-wrap</code> for styling. This wrap is present on all WP Show Posts that are output inside Dispatch.</p>
-<h3>Featured Image</h3>
-<p>The featured image has a fixed height to match the layout. This is achieved using this CSS:</p>
-<pre><code>
-.generate-columns-container article .inside-article img,  .wp-show-posts-image img {
-    height: 180px;
-    width: 100%;
-    -o-object-fit: cover !important;
-    object-fit: cover !important;
-}
-</code></pre>
-<p>You can edit the height property to suit, or remove the CSS it entirely if you want to use your own sizes.</p>
-<h3>Meta above title</h3>
-<p>This is achieved using a flex box on the Entry Header. Again this applied to the GP Blog:</p>
-<pre><code>
-.generate-columns-container article .entry-header, .wp-show-posts-entry-header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-    -ms-flex-direction: column-reverse;
-    flex-direction: column-reverse;
-}
-</code></pre>
-<h3>Entry Title forced to 2 lines</h3>
-<p>The entry title always displays a minimum and maximum of 2 lines. This mantains the across row alignment. Again this is applied to GP Blog. The <code>ex</code> unit is used to define the number of lines visible. The lines are set by defining the <code>line-height</code> and setting the <code>height</code> to as many mutiples as you require lines. e.g up the height to 7.5ex will create three lines.</p>
-<pre><code>
-.generate-columns-container article .entry-header .entry-title, .wp-show-posts article .wp-show-posts-entry-title {
-    line-height: 2.5ex;
-    height: 5ex;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-</code></pre>
-<p>&nbsp;</p>
-<h2>List: Align</h2>
-<p>Designed for a single column list this displays the content the image to the left and content to the right. This is subtly different to just resizing the image in the WP Show Posts list settings and aligning it left. Thanks to the Content Wrap we added (above) the content will never wrap around the image. On mobile it just stacks.</p>
-<p>To add one of these your posts requires a little markup. And is done like so:</p>
-<pre><code>&lt;div class="wpsp-align"&gt;shortcode_goes_here&lt;/div&gt;</code></pre>
-<div class="wpsp-align"><style>.wp-show-posts-columns#wpsp-1279 {margin-left: -2em; }.wp-show-posts-columns#wpsp-1279 .wp-show-posts-inner {margin: 0 0 2em 2em; }</style><section id="wpsp-1279" class=" wp-show-posts" style=""><article class=" wp-show-posts-single wpsp-clearfix post-959 post type-post status-publish format-standard has-post-thumbnail category-styling" itemtype="http://schema.org/CreativeWork" itemscope><div class="wp-show-posts-inner" style="">		<div class="wp-show-posts-image  wpsp-image-left ">
-			<a href="https://kinjoy.co/styling/"  title="A guide to styling and making Dispatch your own"><img width="2400" height="1600" src="https://kinjoy.co/wp-content/uploads/2018/11/hal-gatewood-405338-unsplash.jpg" class="attachment-full size-full wp-post-image" alt="" itemprop="image" /></a>		</div>
-		<div class="wpsp-content-wrap">
-	<!-- Openeing wrapper -->						<header class="wp-show-posts-entry-header">
-							<h2 class="wp-show-posts-entry-title" itemprop="headline"><a href="https://kinjoy.co/styling/" rel="bookmark">A guide to styling and making Dispatch your own</a></h2><div class="wp-show-posts-entry-meta wp-show-posts-entry-meta-below-title post-meta-inline"><span class="wp-show-posts-posted-on wp-show-posts-meta">
-					<a href="https://kinjoy.co/styling/" title="8:07 pm" rel="bookmark"><time class="wp-show-posts-entry-date published" datetime="2018-10-21T20:07:51+00:00" itemprop="datePublished">October 21, 2018</time><time class="wp-show-posts-updated" datetime="2020-01-24T07:33:47+00:00" itemprop="dateModified">January 24, 2020</time></a>
-				</span></div>						</header><!-- .entry-header -->
-											<div class="wp-show-posts-entry-summary" itemprop="text">
-							<p>Dispatch is a Magazine style blog for your new website. Each of its features have been designed and built using GeneratePress and WP Show Posts. As expected of a Flint Skin Site it uses Custom CSS. At over 350 lines it is recommended, but not necessary, to move the Additional CSS to a Child Theme&#8230; <a class="g1-link g1-link-more" href="https://kinjoy.co/styling/">More</a></p>
-						</div><!-- .entry-summary -->
-					<!-- Close WPSP Wrapper -->
-</div></div><!-- wp-show-posts-inner --><div class="wpsp-clear"></div></article><article class=" wp-show-posts-single wpsp-clearfix post-1406 post type-post status-publish format-standard has-post-thumbnail category-uncategorized" itemtype="http://schema.org/CreativeWork" itemscope><div class="wp-show-posts-inner" style="">		<div class="wp-show-posts-image  wpsp-image-left ">
-			<a href="https://kinjoy.co/using-wp-show-posts/"  title="Using WP Show Posts"><img width="1280" height="853" src="https://kinjoy.co/wp-content/uploads/2018/10/brick-3248755_1280.jpg" class="attachment-full size-full wp-post-image" alt="" itemprop="image" /></a>		</div>
-		<div class="wpsp-content-wrap">
-	<!-- Openeing wrapper -->						<header class="wp-show-posts-entry-header">
-							<h2 class="wp-show-posts-entry-title" itemprop="headline"><a href="https://kinjoy.co/using-wp-show-posts/" rel="bookmark">Using WP Show Posts</a></h2><div class="wp-show-posts-entry-meta wp-show-posts-entry-meta-below-title post-meta-inline"><span class="wp-show-posts-posted-on wp-show-posts-meta">
-					<a href="https://kinjoy.co/using-wp-show-posts/" title="8:41 pm" rel="bookmark"><time class="wp-show-posts-entry-date published" datetime="2018-10-10T20:41:09+00:00" itemprop="datePublished">October 10, 2018</time></a>
-				</span></div>						</header><!-- .entry-header -->
-											<div class="wp-show-posts-entry-summary" itemprop="text">
-							<p>Adding post lists and grids to your Site couldn&#8217;t be easier than with the WP Show Posts plugin. Dispatch uses the Free version to display posts on the Front page and in the Sidebars. Of course with a little Flint Skin CSS treatment. Head off to Dashboard &gt; WP Show Posts &gt; All Lists. Within&#8230; <a class="g1-link g1-link-more" href="https://kinjoy.co/using-wp-show-posts/">More</a></p>
-						</div><!-- .entry-summary -->
-					<!-- Close WPSP Wrapper -->
-</div></div><!-- wp-show-posts-inner --><div class="wpsp-clear"></div></article></section><!-- .wp-show-posts --></div>
-<p>&nbsp;</p>
-<h2>Lists: Sidebar</h2>
-<p>In the right had sidebar you can see the Sidebar list. This List is set to 1 column and only displays the Featured Image, Title and Category. This is designed for Widgets, a narrow column or as part of a grid (like in our next List).</p>
-<p>To add this style the Widget requires a CSS Class of:</p>
-<pre><code>wpsp-card</code></pre>
-<p>Dispatch comes with Widget Classes Plugin installed. This provides this function.</p>
-<h2></h2>
-<p>&nbsp;</p>
-<h2>List: Header</h2>
-<p>The Header list as seen on the Front Page requires a list containing only 5 posts. And can accomodate most of the content elements. Which are only displayed on the large leader post.</p>
-<p>To add this style the Header Element requires the following element classes:</p>
-<pre><code>wpsp-grid wpsp-card</code></pre>
-<h2></h2>
-<h2>List: Simple</h2>
-<p>This is output using the <code>wpsp-card</code> inserted into a containing DIV like so:</p>
-<pre><code>&lt;div class="wpsp-card"&gt;shortcode goes here&lt;/dib&gt;</code></pre>
-<p>&nbsp;</p>
-<h2>List: Simple Sidebar</h2>
-<p>Nothing fancy here,  just a list being output using the a Widget in the sidebar.</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-]]></content:encoded>
-										</item>
-		<item>
-		<title>Hooks &#8211; Custom Theme Elements</title>
-		<link>https://kinjoy.co/hook-elements/</link>
-				<pubDate>Fri, 21 Sep 2018 18:21:04 +0000</pubDate>
-		<dc:creator><![CDATA[Dan L]]></dc:creator>
-				<category><![CDATA[Styling]]></category>
-		<category><![CDATA[Time Saving]]></category>
 
-		<guid isPermaLink="false">https://forum.assemblewp.com/?p=942</guid>
-				<description><![CDATA[Dispatch uses a few Hook Elements to create some Custom Elements in the site. All of them provide dynamic output and should not require any ... <a title="Hooks &#8211; Custom Theme Elements" class="read-more" href="https://kinjoy.co/hook-elements/">Read more</a> <a class="g1-link g1-link-more" href="https://kinjoy.co/hook-elements/">More</a>]]></description>
-								<content:encoded><![CDATA[<p>Dispatch uses a few Hook Elements to create some Custom Elements in the site.<br />
-All of them provide dynamic output and should not require any changes to their content.</p>
-<p>For more info on the Hooke Element read here:</p>
-<blockquote class="wp-embedded-content" data-secret="YuL21s37F2"><p><a href="https://docs.generatepress.com/article/hooks-element-overview/">Hooks Element Overview</a></p></blockquote>
-<p><iframe title="&#8220;Hooks Element Overview&#8221; &#8212; Documentation" class="wp-embedded-content" sandbox="allow-scripts" security="restricted" style="position: absolute; clip: rect(1px, 1px, 1px, 1px);" src="https://docs.generatepress.com/article/hooks-element-overview/embed/#?secret=YuL21s37F2" data-secret="YuL21s37F2" width="600" height="338" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></p>
-<h2>Custom Post Navigation</h2>
-<h5>Adding a custom featured image post navigation at the foot of all posts.<br />
-Please note: that the Post Navigation is disabled in the Customizer as it is not required.</h5>
-<h2>Secondary Navigation</h2>
-<p>This hook calls the Secondary Navigation and displays below the header / header element. It also uses Display Rules so it is excluded from All Posts.<br />
-Please note: the Secondary Navigation Location in the Customizer is set to No Navigation.</p>
-<h2>WPSP Open Wrapper &amp; WPSP Close Wrapper</h2>
-<p>These two hooks create a Div wrap around the Enter Header, Summary and Entry Footer of the WP Show Posts. This is used to create the custom styling you see here.</p>
-]]></content:encoded>
-										</item>
-		<item>
-		<title>Page and Post Heroes</title>
-		<link>https://kinjoy.co/page-and-post-heroes/</link>
-				<pubDate>Fri, 21 Sep 2018 17:48:30 +0000</pubDate>
-		<dc:creator><![CDATA[Dan L]]></dc:creator>
-				<category><![CDATA[Styling]]></category>
 
-		<guid isPermaLink="false">https://forum.assemblewp.com/?p=928</guid>
-				<description><![CDATA[Page Heroes are those big bold images and headlines you find at the top of your posts and pages. They sit just below the Site ... <a title="Page and Post Heroes" class="read-more" href="https://kinjoy.co/page-and-post-heroes/">Read more</a> <a class="g1-link g1-link-more" href="https://kinjoy.co/page-and-post-heroes/">More</a>]]></description>
-								<content:encoded><![CDATA[<p>Page Heroes are those big bold images and headlines you find at the top of your posts and pages. They sit just below the Site Header and added using the Header Element module, when activated provides the Elements menu in <strong>Dashboard &gt; Appearance &gt; Elements</strong></p>
-<p>Dispatch has two Header Elements in place. But you can add as many as you need.</p>
-<h2>Magazine Grid &#8211; Home Page</h2>
-<p>Combined with the WP Show Posts plugin this header creates a 5 post card grid. Very few settings are required. These are the main points:</p>
-<p><strong>Hero Content:</strong> WP Show Posts Short code<br />
-<strong>Element Classes:</strong> wpsp-grid wpsp-card<br />
-<small>This creates the grid and styles the cards</small><br />
-<strong>Padding:</strong> Zero padding<br />
-<small>Makes the grid fill the hero</small><br />
-<strong>Display Rules:</strong> Front Page</p>
-<p>The shortcode required is found in the WP Show Posts list you created. More detail on creating these special lists can be found <a href="https://gpsites.co/dispatch/using-wp-show-posts/">here</a>.</p>
-<h2>Single Post</h2>
-<p><strong>Template Tags: </strong>{{post_title}}<br />
-<strong>Element Classes:</strong>  overlay<br />
-<small>This applies a Custom CSS Inner Box Shadow overlay to improve contrast for the text content.</small><br />
-<strong>Container:</strong> Contained<br />
-<strong>Inner Container:</strong> Contained<br />
-<strong>Padding:</strong> Top: 36% and Bottom: 30px.<br />
-<small>This will keep images responsive whilst maintaining bottom spacing</small><br />
-<strong>Background Image:</strong> Featured Image<br />
-<strong>Disable Featured Image:</strong> Check<br />
-<small>This stops the featured image also being displayed in the post</small><br />
-<strong>Display Rules:</strong> All Posts</p>
-<h2>Creating new Header Elements</h2>
-<p>Creating a new Header Element is as easy as creating a new post. This article explains how to:</p>
-<blockquote class="wp-embedded-content" data-secret="eyCOd7PBPq"><p><a href="https://docs.generatepress.com/article/header-element-overview/">Header Element Overview</a></p></blockquote>
-<p><iframe title="&#8220;Header Element Overview&#8221; &#8212; Documentation" class="wp-embedded-content" sandbox="allow-scripts" security="restricted" style="position: absolute; clip: rect(1px, 1px, 1px, 1px);" src="https://docs.generatepress.com/article/header-element-overview/embed/#?secret=eyCOd7PBPq" data-secret="eyCOd7PBPq" width="600" height="338" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></p>
-<h3>Display Rules</h3>
-<p>Display Rules are used to determine where a Header Element is displayed. Here are some pointers:</p>
-<h4>Front Page</h4>
-<p>When you select a blog or a static page in <strong>Dashboard &gt; Settings &gt; Reading</strong> as your Front Page. You must specifically apply that as a Display Rule for it to display.</p>
-<h4>Display the Dispatch Header Elements on other pages</h4>
-<p>Simply edit the Header Element and add additional Display Rules.</p>
-<h4>Rule Conflicts</h4>
-<p>When creating multiple Elements, it is possible to create ones where the Display Rules conflict. For example:</p>
-<p>First Element Display Rule = All Posts<br />
-Second Element Display Rule = A specific Post</p>
-<p>In this instance the First Element wins and that specific post looks like the rest of them. Its a case of the first element that was registered wins. To get round this you must use the Exclude option in the First Element so it doesn&#8217;t apply to the specific post.</p>
-<h3>Copy an existing Header Element</h3>
-<p>So you think these Header Elements are awesome. But you want to add your own versions to some other posts, and there is not duplicate feature. Well just add one of the Duplicate Post plugins found on wordpress.org and your in business.</p>
-]]></content:encoded>
-										</item>
-		<item>
-		<title>How to change the Custom Colors</title>
-		<link>https://kinjoy.co/how-to-change-the-custom-colors/</link>
-				<pubDate>Fri, 21 Sep 2018 16:50:22 +0000</pubDate>
-		<dc:creator><![CDATA[Dan L]]></dc:creator>
-				<category><![CDATA[Styling]]></category>
+<p class="has-drop-cap">Suspendisse ac mollis sem, eget molestie ligula. Aliquam vehicula lacinia magna eget porttitor. Fusce posuere magna vitae ultricies pharetra. Sed tellus lectus, viverra sed mi ut, iaculis condimentum justo. Fusce facilisis imperdiet elit quis vulputate. Duis in tincidunt libero, in laoreet libero. Nulla et nulla molestie, blandit justo eget, hendrerit eros. Ut quis viverra tortor. Etiam volutpat efficitur leo, id mollis neque. Phasellus pulvinar efficitur nibh nec laoreet. Quisque fermentum mauris nisi, ac hendrerit lectus molestie at. Quisque laoreet leo eget felis bibendum vehicula. Nulla pharetra vulputate lacinia. Vestibulum consectetur quam nulla, sed imperdiet metus suscipit vel. Quisque ut erat nisi.  <br></p>
 
-		<guid isPermaLink="false">https://forum.assemblewp.com/?p=909</guid>
-				<description><![CDATA[Changing Colors in Dispatch are mainly done via the Theme Customizer. Certain elements such as Page Heros are controlled within the Header Element and are ... <a title="How to change the Custom Colors" class="read-more" href="https://kinjoy.co/how-to-change-the-custom-colors/">Read more</a> <a class="g1-link g1-link-more" href="https://kinjoy.co/how-to-change-the-custom-colors/">More</a>]]></description>
-								<content:encoded><![CDATA[<p>Changing Colors in Dispatch are mainly done via the Theme Customizer. Certain elements such as Page Heros are controlled within the Header Element and are covered in that article. There are a few colors that are controlled by CSS. The rules for them are found in the <strong>Customizer > Additional CSS</strong>:</p>
-<h2>Primary Navigation</h2>
-<h3>Hairline Border above desktop navigation</h3>
-<p><code></p>
-<pre>
-.main-navigation .inside-navigation {
-    border-top: 0.5px solid #d4d7d8;
-}
-</pre>
-<p></code></p>
-<h3>Menu item underline on hover</h3>
-<p><code></p>
-<pre>
-.main-navigation ul li:after {
-    background-color: #000;
-}
-</pre>
-<p></code></p>
-<h3>Navigation Search</p>
-<h3>
-<p><code></p>
-<pre>
-.navigation-search.nav-search-active {
-    background-color: rgba(255,255,255,0.95);
-    top: 100%;
-}
-</pre>
-<p></code></p>
-<h2>Buttons</h2>
-<p>All of the colors are controlled via the customizer. However the button border inherits the color of the font. This is set by this CSS:</p>
-<p><code></p>
-<pre>
-button, html input[type="button"], input[type="reset"], input[type="submit"], a.button, a.button:visited, a.wp-block-button__link g1-button g1-button-solid g1-button-l:not(.has-background) {
-    pointer-events: initial !important;
-    border-color: inherit;
-    border: 1px solid;
-}
-</pre>
-<p></code></p>
-<h2>WP Show Posts &#8211; Card Style</h2>
-<h3>Entry Title, Summary and Meta text color</h3>
-<p><code></p>
-<pre>
-.wpsp-card, .wpsp-card a, .wpsp-card .wp-show-posts-meta a, .wpsp-card .wp-show-posts-meta a:visited {
-    color: #fff;
-}
-</pre>
-<p></code></p>
-<h3>Gradient overlay</h3>
-<p>To improve contrast of text a subtle gradient overlay is applied to the cards content wrapper.</p>
-<p><code></p>
-<pre>
-.wpsp-card .wpsp-content-wrap {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 5% 8%;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.35);
-    background: -webkit-gradient(linear, left bottom, left top, color-stop(80%, rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0)));
-    background: linear-gradient(0deg, rgba(80, 50, 50, 0.5) 30%, rgba(0, 0, 0, 0) 100%);
-    pointer-events: none;
-}
-</pre>
-<p></code></p>
-<h2>Custom Featured Image Post Navigation Next/Previous</h2>
-<p><code></p>
-<pre>
-.post-nav {
-    padding: 6px 12px;
-    border-radius: 3px;
-    font-size: 0.7em;
-    text-transform: uppercase;
-    background-color: #ff1956;
-    color: #fff !important;
-}
-</pre>
-<p></code></p>
-]]></content:encoded>
-										</item>
-		<item>
-		<title>Style Guide</title>
-		<link>https://kinjoy.co/style-guide/</link>
-				<pubDate>Fri, 21 Sep 2018 16:16:06 +0000</pubDate>
-		<dc:creator><![CDATA[Dan L]]></dc:creator>
-				<category><![CDATA[Styling]]></category>
 
-		<guid isPermaLink="false">https://forum.assemblewp.com/?p=895</guid>
-				<description><![CDATA[Heading One H1 Heading Two H2 Heading Three H3 Heading Four H4 Heading Five H5 Heading Six H6 Font: Playfair Playfair is a transitional design. ... <a title="Style Guide" class="read-more" href="https://kinjoy.co/style-guide/">Read more</a> <a class="g1-link g1-link-more" href="https://kinjoy.co/style-guide/">More</a>]]></description>
-								<content:encoded><![CDATA[<h1>Heading One H1</h1>
-<h2>Heading Two H2</h2>
-<h3>Heading Three H3</h3>
-<h4>Heading Four H4</h4>
-<h5>Heading Five H5</h5>
-<h6>Heading Six H6</h6>
-<h4>Font: Playfair</h4>
-<p>Playfair is a transitional design. In the European Enlightenment in the late 18th century, broad nib quills were replaced by pointed steel pens as the popular writing tool of the day. Together with developments in printing technology, ink, and paper making, it became to print letterforms of high contrast and delicate hairlines that were increasingly detached from the written letterforms.</p>
-<p>This design lends itself to this period, and while it is not a revival of any particular design, it takes influence from the designs of John Baskerville and from ‘Scotch Roman’ designs. Being a Display (large size) design in the transitional genre, functionally and stylistically it can accompany Georgia for body text.</p>
-<p><a class="button" href="#">volume button</a></p>
-<h2>Color Plan</h2>
-<div style="display: flex; flex-wrap: wrap;">
-<div style="display: block; flex: 1 0 30%; height: 100px; background-color: #ff1956; color: #fff; border: 2px solid #fff; text-align: center; box-sizing: border-box;">#ff1956</div>
-<div style="display: block; flex: 1 0 70%; height: 100px; background-color: #fbfbfb; color: #3a3a3a; border: 2px solid #fff; text-align: center; box-sizing: border-box;">#fbfbfb</div>
-<div style="display: block; flex: 1 0 70%; height: 100px; background-color: #f4f6f7; color: #3a3a3a; border: 2px solid #fff; text-align: center; box-sizing: border-box;">#f4f6f7</div>
-<div style="display: block; flex: 1 0 30%; height: 100px; background-color: #3a3a3a; color: #fff; border: 2px solid #fff; text-align: center; box-sizing: border-box;">#3a3a3c</div>
+
+<p>Suspendisse ac mollis sem, eget molestie ligula. Aliquam vehicula lacinia magna eget porttitor. Fusce posuere magna vitae ultricies pharetra. Sed tellus lectus, viverra sed mi ut, iaculis condimentum justo. Fusce facilisis imperdiet elit quis vulputate. Duis in tincidunt libero, in laoreet libero. Nulla et nulla molestie, blandit justo eget, hendrerit eros. </p>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<blockquote style="text-align:left" class="wp-block-quote"><p>Curabitur dignissim fermentum nulla, vulputate auctor dui viverra eu. Sed libero urna, tristique ac quam sed, imperdiet placerat lectus.</p><cite><strong>&#8211; Robert Green</strong></cite></blockquote>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<figure class="wp-block-image"><img src="https://websitedemos.net/pet-care-07-wip/wp-content/uploads/sites/461/2019/06/blog08-free-img-1024x570.jpg" alt="" class="wp-image-782"/></figure>
+
+
+
+<div style="height:25px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-uagb-advanced-heading" id="uagb-adv-heading-13b53f5f-d3e9-46a5-a5c7-8b68bbfb5896"><h3 class="uagb-heading-text">Curabitur dignissim fermentum nulla &#8211;</h3><p class="uagb-desc-text"></p></div>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-columns has-2-columns">
+<div class="wp-block-column">
+<h4 style="text-align:left">Nam mattis quis &#8211;</h4>
+
+
+
+<p>Nulla rutrum placerat arcu. Nulla sed accumsan lacus, vitae bibendum ex. Nam sit amet magna a lectus tempor elementum. Aliquam velit sapien, aliquet id tristique vel, congue vitae leo. Aenean at lobortis eros. </p>
+
+
+
+<p>Curabitur dignissim fermentum nulla, vulputate auctor dui viverra eu. Sed libero urna, tristique ac quam sed, imperdiet placerat lectus. Integer ut dui et urna bibendum ultrices ut egestas diam. Nulla egestas mi eget turpis tincidunt dignissim. Sed eleifend pretium porta. Nam molestie luctus eros quis aliquet.</p>
 </div>
-<p>&nbsp;</p>
-<p><a class="button" href="#">volume button</a></p>
-]]></content:encoded>
-										</item>
-		<item>
-		<title>Aside for Widgets</title>
-		<link>https://kinjoy.co/aside-for-widgets/</link>
-				<comments>https://kinjoy.co/aside-for-widgets/#respond</comments>
-				<pubDate>Thu, 20 Sep 2018 00:32:07 +0000</pubDate>
-		<dc:creator><![CDATA[Dan L]]></dc:creator>
-				<category><![CDATA[Uncategorized]]></category>
 
-		<guid isPermaLink="false">https://gpsites.co/dispatch/?p=1461</guid>
-				<description><![CDATA[Sidebar Widgets are a main feature of any Magazine Blogging site. To aid with that Dispatch uses a nifty little plugin and a couple of ... <a title="Aside for Widgets" class="read-more" href="https://kinjoy.co/aside-for-widgets/">Read more</a> <a class="g1-link g1-link-more" href="https://kinjoy.co/aside-for-widgets/">More</a>]]></description>
-								<content:encoded><![CDATA[<p>Sidebar Widgets are a main feature of any Magazine Blogging site. To aid with that Dispatch uses a nifty little plugin and a couple of custom CSS classes to make styling your sidebar a breeze.</p>
-<h2>Widget CSS Classes</h2>
-<p>Using the namesake plugin you can now add CSS Classes to Widgets. Simple.</p>
-<h3>Dispatch Widget Classes</h3>
-<p><strong>CSS Class:</strong> <code>zero-padding</code><br />
-Removes the padding from the widget. Perfect for adding those banner ads for maximum space.</p>
-<p><strong>CSS Class:</strong> <code>no-background</code><br />
-Removes the widget color background that is set in the Customizer.</p>
-<p><strong>CSS Class:</strong> <code>wpsp-card</code><br />
-Used exclusively with the WP Show Posts Widget and with zero-padding and no-background.<br />
-Read more <a href="https://gpsites.co/dispatch/using-wp-show-posts/">here</a></p>
-<h3>Adding your own classes</h3>
-<p>Want different color background for your widgets. Heres how to. Add you Custom Class Name to your widget. In this example we&#8217;ll go for a red color and name our class <code>red-background</code>. Now thats added lets add some CSS.</p>
-<pre><code>
-.widget.red-background {
-    background-color: #ff0000;
-}
-</code></pre>
+
+
+<div class="wp-block-column">
+<div class="wp-block-uagb-advanced-heading" id="uagb-adv-heading-4efebae8-6494-4ded-88cd-0b2a02cb5dab"><h2 class="uagb-heading-text"></h2><p class="uagb-desc-text"> <strong><em>Nulla rutrum placerat arcu. Nulla sed accumsan lacus, vitae bibendum ex. Nam sit amet magna a lectus tempor elementum. Aliquam velit sapien, aliquet id tristique vel, congue vitae leo.</em></strong> </p></div>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="uagb-infobox__outer-wrap" id="uagb-infobox-9201fcbc-88c2-453a-a9c3-b4b5592364b7"><div class="uagb-infobox__content-wrap uagb-infobox uagb-infobox-has-icon uagb-infobox-icon-left-title uagb-infobox-left uagb-infobox-image-valign-top uagb-infobox-enable-border-radius "><div class="uagb-ifb-left-right-wrap"><div class="uagb-ifb-content"><div class="uagb-ifb-left-title-image"><div class="uagb-ifb-image-icon-content uagb-ifb-imgicon-wrap"><div class="uagb-ifb-icon-wrap"><span class="uagb-ifb-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"></path></svg></span></div></div><div class="uagb-ifb-title-wrap"><span class="uagb-ifb-title-prefix">P</span><h6 class="uagb-ifb-title">WORDS FROM AUTHOR</h6></div></div><div class="uagb-ifb-text-wrap"></div></div></div></div></div>
+</div>
+</div>
 ]]></content:encoded>
-							<wfw:commentRss>https://kinjoy.co/aside-for-widgets/feed/</wfw:commentRss>
+							<wfw:commentRss>https://kinjoy.co/healthy-habits-exercises-for-your-pets/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
 							</item>
 		<item>
-		<title>A Sample Post with Comments</title>
-		<link>https://kinjoy.co/sample-post/</link>
-				<comments>https://kinjoy.co/sample-post/#comments</comments>
-				<pubDate>Wed, 22 Aug 2018 00:00:39 +0000</pubDate>
-		<dc:creator><![CDATA[Dan L]]></dc:creator>
-				<category><![CDATA[Featured]]></category>
-		<category><![CDATA[Time Saving]]></category>
+		<title>Not Just Humans Need Home</title>
+		<link>https://kinjoy.co/not-just-humans-need-home/</link>
+				<comments>https://kinjoy.co/not-just-humans-need-home/#respond</comments>
+				<pubDate>Fri, 28 Jun 2019 06:24:47 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+				<category><![CDATA[Training]]></category>
 
-		<guid isPermaLink="false">https://forum.assemblewp.com/?p=210</guid>
-				<description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis ... <a title="A Sample Post with Comments" class="read-more" href="https://kinjoy.co/sample-post/">Read more</a> <a class="g1-link g1-link-more" href="https://kinjoy.co/sample-post/">More</a>]]></description>
-								<content:encoded><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa <a href="#">a link to know where</a> qui officia deserunt mollit anim id est laborum. <a href="#">a link to know where</a></p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, style sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-<h2>Great typography and bold imagery speak volumes about quintessential topics</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia <a href="#">a link to know where</a> deserunt mollit anim id est laborum.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <a href="#">a link to know where</a></p>
-<h3>Great typography and bold imagery speak volumes about quintessential topics</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-]]></content:encoded>
-							<wfw:commentRss>https://kinjoy.co/sample-post/feed/</wfw:commentRss>
-		<slash:comments>3</slash:comments>
-							</item>
-		<item>
-		<title>This Santa Really Can Tell How To Drink And Hack Your Hangover. Get On With Your Day As Quick As You Can</title>
-		<link>https://kinjoy.co/santa-hangover/</link>
-				<comments>https://kinjoy.co/santa-hangover/#respond</comments>
-				<pubDate>Fri, 04 Dec 2015 15:20:01 +0000</pubDate>
-		<dc:creator><![CDATA[Dan L]]></dc:creator>
-				<category><![CDATA[Funny]]></category>
-		<category><![CDATA[don't miss]]></category>
-		<category><![CDATA[Header background]]></category>
-		<category><![CDATA[Header gradient]]></category>
-		<category><![CDATA[Header pattern]]></category>
-		<category><![CDATA[Header style 02]]></category>
-		<category><![CDATA[home]]></category>
+		<guid isPermaLink="false">https://websitedemos.net/pet-care-07-wip/2019/06/28/20-tips-for-your-dog-training-copy/</guid>
+				<description><![CDATA[Suspendisse ac mollis sem, eget molestie ligula. Aliquam vehicula lacinia magna eget porttitor. Fusce posuere magna vitae ultricies pharetra. Sed tellus lectus, viverra sed mi ut, iaculis condimentum justo. Fusce facilisis imperdiet elit quis vulputate. Duis in tincidunt libero, in laoreet libero. 
+						]]></description>
+								<content:encoded><![CDATA[
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
 
-		<guid isPermaLink="false">http://bomb-live.localhost/?p=271</guid>
-				<description><![CDATA[ Sed felis augue, dictum nec consectetur quis, elementum eu arcu. Nunc ornare arcu lacus, quis aliquet odio bibendum non. Nam vitae libero mauris. Suspendisse vitae purus ligula. Morbi sed diam eget dolor posuere convallis vel vel nisl. Nulla sagittis efficitur ex, at sodales massa pulvinar a. Nunc quis lacinia eros. Fusce ac ipsum gravida, tristique. <a class="g1-link g1-link-more" href="https://kinjoy.co/santa-hangover/">More</a>]]></description>
-								<content:encoded><![CDATA[<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-<h2>1. Image with share buttons</h2>
-<figure id="attachment_335" aria-describedby="caption-attachment-335" class="wp-caption aligncenter"><img width="768" height="512" src="/wp-content/themes/bimber/dummy-data/geeky/images/single_content_01_v01.jpg" class="alignnone" alt="" /><figcaption id="caption-attachment-335" class="wp-caption-text">A small river named Duden flows. Source: <a href="/">MediaSource</a></figcaption></figure>
-<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-<h2>2. Advanced GIF control</h2>
-<figure id="attachment_338" aria-describedby="caption-attachment-338" class="wp-caption aligncenter"><img width="364" height="205" src="/wp-content/themes/bimber/dummy-data/images/single_content_gif_v01.gif" class="alignnone" alt="" /><figcaption id="caption-attachment-338" class="wp-caption-text">Far far away. Source: <a href="/">MediaSource</a></figcaption></figure>
-<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-<h2>3. Self hosted responsive video</h2>
 
-<p><img width="710" height="400" src="/wp-content/themes/bimber/dummy-data/geeky/images/embed_intro.jpg" class="alignnone" alt="" /></p>
-<h2>4. YouTube responsive embed</h2>
-<div id="g1-fluid-wrapper-counter-1" class="g1-fluid-wrapper " style="width:662px;" data-g1-fluid-width="662" data-g1-fluid-height="372">
-<div class="g1-fluid-wrapper-inner" style="padding-bottom:56.19335347432%;">
-	       <iframe width="662" height="372" src="https://www.youtube.com/embed/WwoKkq685Hk?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-	       </div></div>
-<p>Behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-<h2>5. Instagram responsive embed</h2>
-<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/BhJor38jsRO/" data-instgrm-version="8" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
-<div style="padding:8px;">
-<div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;">
-<div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div>
+
+<p class="has-drop-cap">Suspendisse ac mollis sem, eget molestie ligula. Aliquam vehicula lacinia magna eget porttitor. Fusce posuere magna vitae ultricies pharetra. Sed tellus lectus, viverra sed mi ut, iaculis condimentum justo. Fusce facilisis imperdiet elit quis vulputate. Duis in tincidunt libero, in laoreet libero. Nulla et nulla molestie, blandit justo eget, hendrerit eros. Ut quis viverra tortor. Etiam volutpat efficitur leo, id mollis neque. Phasellus pulvinar efficitur nibh nec laoreet. Quisque fermentum mauris nisi, ac hendrerit lectus molestie at. Quisque laoreet leo eget felis bibendum vehicula. Nulla pharetra vulputate lacinia. Vestibulum consectetur quam nulla, sed imperdiet metus suscipit vel. Quisque ut erat nisi.  <br></p>
+
+
+
+<p>Suspendisse ac mollis sem, eget molestie ligula. Aliquam vehicula lacinia magna eget porttitor. Fusce posuere magna vitae ultricies pharetra. Sed tellus lectus, viverra sed mi ut, iaculis condimentum justo. Fusce facilisis imperdiet elit quis vulputate. Duis in tincidunt libero, in laoreet libero. Nulla et nulla molestie, blandit justo eget, hendrerit eros. </p>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<blockquote style="text-align:left" class="wp-block-quote"><p>Curabitur dignissim fermentum nulla, vulputate auctor dui viverra eu. Sed libero urna, tristique ac quam sed, imperdiet placerat lectus.</p><cite><strong>&#8211; Robert Green</strong></cite></blockquote>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<figure class="wp-block-image"><img src="https://websitedemos.net/pet-care-07-wip/wp-content/uploads/sites/461/2019/06/blog09-free-img-1024x570.jpg" alt="" class="wp-image-780"/></figure>
+
+
+
+<div style="height:25px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-uagb-advanced-heading" id="uagb-adv-heading-4efe4d42-d0ee-4c90-940a-9d3e911e4100"><h3 class="uagb-heading-text">Curabitur dignissim fermentum nulla &#8211;</h3><p class="uagb-desc-text"></p></div>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-columns has-2-columns">
+<div class="wp-block-column">
+<h4 style="text-align:left">Nam mattis quis &#8211;</h4>
+
+
+
+<p>Nulla rutrum placerat arcu. Nulla sed accumsan lacus, vitae bibendum ex. Nam sit amet magna a lectus tempor elementum. Aliquam velit sapien, aliquet id tristique vel, congue vitae leo. Aenean at lobortis eros. </p>
+
+
+
+<p>Curabitur dignissim fermentum nulla, vulputate auctor dui viverra eu. Sed libero urna, tristique ac quam sed, imperdiet placerat lectus. Integer ut dui et urna bibendum ultrices ut egestas diam. Nulla egestas mi eget turpis tincidunt dignissim. Sed eleifend pretium porta. Nam molestie luctus eros quis aliquet.</p>
 </div>
-<p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BhJor38jsRO/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Some awesome photos for our Bimber &#8211; Viral Magazine Theme #viral #WordPress #magazine #theme</a></p>
-<p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A post shared by <a href="https://www.instagram.com/bringthepixel/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank"> Bring The Pixel</a> (@bringthepixel) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2018-04-04T13:40:56+00:00">Apr 4, 2018 at 6:40am PDT</time></p>
+
+
+
+<div class="wp-block-column">
+<div class="wp-block-uagb-advanced-heading" id="uagb-adv-heading-ef198856-cd60-49f3-b9ad-b6adec72f492"><h2 class="uagb-heading-text"></h2><p class="uagb-desc-text"> <strong><em>Nulla rutrum placerat arcu. Nulla sed accumsan lacus, vitae bibendum ex. Nam sit amet magna a lectus tempor elementum. Aliquam velit sapien, aliquet id tristique vel, congue vitae leo.</em></strong> </p></div>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="uagb-infobox__outer-wrap" id="uagb-infobox-d086416f-62f8-4462-823b-000b711bb537"><div class="uagb-infobox__content-wrap uagb-infobox uagb-infobox-has-icon uagb-infobox-icon-left-title uagb-infobox-left uagb-infobox-image-valign-top uagb-infobox-enable-border-radius "><div class="uagb-ifb-left-right-wrap"><div class="uagb-ifb-content"><div class="uagb-ifb-left-title-image"><div class="uagb-ifb-image-icon-content uagb-ifb-imgicon-wrap"><div class="uagb-ifb-icon-wrap"><span class="uagb-ifb-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"></path></svg></span></div></div><div class="uagb-ifb-title-wrap"><span class="uagb-ifb-title-prefix">P</span><h6 class="uagb-ifb-title">WORDS FROM AUTHOR</h6></div></div><div class="uagb-ifb-text-wrap"></div></div></div></div></div>
 </div>
-</blockquote>
-<p><script async defer src="//www.instagram.com/embed.js"></script></p>
-<p>Behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-<h2>6. Twitter responsive embed</h2>
-<blockquote class="twitter-tweet" data-width="550" data-dnt="true">
-<p lang="en" dir="ltr">Big day here at <a href="https://twitter.com/TwitterUK?ref_src=twsrc%5Etfw">@TwitterUK</a> &#8211; we&#39;re launching Moments! Look out for the lightning bolt on your account soon <img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/26a1.png" alt="⚡" class="wp-smiley" style="height: 1em; max-height: 1em;" /> <a href="https://t.co/98tqlmecpV">pic.twitter.com/98tqlmecpV</a></p>
-<p>&mdash; Twitter UK (@TwitterUK) <a href="https://twitter.com/TwitterUK/status/676689760384086016?ref_src=twsrc%5Etfw">December 15, 2015</a></p></blockquote>
-<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-<p>Behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+</div>
 ]]></content:encoded>
-							<wfw:commentRss>https://kinjoy.co/santa-hangover/feed/</wfw:commentRss>
+							<wfw:commentRss>https://kinjoy.co/not-just-humans-need-home/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
 							</item>
 		<item>
-		<title>29 Ridiculous Tips For Making The Most Of Curly Hair</title>
-		<link>https://kinjoy.co/29-ridiculous-tips-for-making-the-most-of-curly-hair/</link>
-				<comments>https://kinjoy.co/29-ridiculous-tips-for-making-the-most-of-curly-hair/#respond</comments>
-				<pubDate>Fri, 04 Dec 2015 15:15:37 +0000</pubDate>
-		<dc:creator><![CDATA[Dan L]]></dc:creator>
-				<category><![CDATA[WTF]]></category>
-		<category><![CDATA[curly]]></category>
-		<category><![CDATA[hair]]></category>
-		<category><![CDATA[Header background]]></category>
-		<category><![CDATA[Header gradient]]></category>
-		<category><![CDATA[Header pattern]]></category>
-		<category><![CDATA[Header style 02]]></category>
+		<title>20 Tips for Your Dog Training</title>
+		<link>https://kinjoy.co/20-tips-for-your-dog-training/</link>
+				<comments>https://kinjoy.co/20-tips-for-your-dog-training/#respond</comments>
+				<pubDate>Fri, 28 Jun 2019 06:14:50 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+				<category><![CDATA[Training]]></category>
 
-		<guid isPermaLink="false">http://bomb-live.localhost/?p=307</guid>
-				<description><![CDATA[Felis augue, dictum nec consectetur quis, elementum eu arcu. Nunc ornare arcu lacus, quis aliquet odio bibendum non. Nam vitae libero mauris. Suspendisse vitae purus ligula. Morbi sed diam eget dolor posuere convallis vel vel nisl. Nulla sagittis efficitur ex, at sodales massa pulvinar a. Nunc quis lacinia eros. Fusce ac ipsum gravida, tristique sed. <a class="g1-link g1-link-more" href="https://kinjoy.co/29-ridiculous-tips-for-making-the-most-of-curly-hair/">More</a>]]></description>
-								<content:encoded><![CDATA[<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-<h2>1. Image with share buttons</h2>
-<figure id="attachment_335" aria-describedby="caption-attachment-335" class="wp-caption aligncenter"><img width="768" height="512" src="/wp-content/themes/bimber/dummy-data/geeky/images/single_content_01_v01.jpg" class="alignnone" alt="" /><figcaption id="caption-attachment-335" class="wp-caption-text">A small river named Duden flows. Source: <a href="/">MediaSource</a></figcaption></figure>
-<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-<h2>2. Advanced GIF control</h2>
-<figure id="attachment_338" aria-describedby="caption-attachment-338" class="wp-caption aligncenter"><img width="364" height="205" src="/wp-content/themes/bimber/dummy-data/images/single_content_gif_v01.gif" class="alignnone" alt="" /><figcaption id="caption-attachment-338" class="wp-caption-text">Far far away. Source: <a href="/">MediaSource</a></figcaption></figure>
-<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-<h2>3. Self hosted responsive video</h2>
+		<guid isPermaLink="false">https://websitedemos.net/pet-care-07-wip/2019/06/28/benefits-of-exercising-with-your-dog-copy/</guid>
+				<description><![CDATA[Suspendisse ac mollis sem, eget molestie ligula. Aliquam vehicula lacinia magna eget porttitor. Fusce posuere magna vitae ultricies pharetra. Sed tellus lectus, viverra sed mi ut, iaculis condimentum justo. Fusce facilisis imperdiet elit quis vulputate. Duis in tincidunt libero, in laoreet libero. 
+						]]></description>
+								<content:encoded><![CDATA[
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
 
-<p><img width="710" height="400" src="/wp-content/themes/bimber/dummy-data/geeky/images/embed_intro.jpg" class="alignnone" alt="" /></p>
-<h2>4. YouTube responsive embed</h2>
-<div id="g1-fluid-wrapper-counter-2" class="g1-fluid-wrapper " style="width:662px;" data-g1-fluid-width="662" data-g1-fluid-height="372">
-<div class="g1-fluid-wrapper-inner" style="padding-bottom:56.19335347432%;">
-	       <iframe width="662" height="372" src="https://www.youtube.com/embed/WwoKkq685Hk?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-	       </div></div>
-<p>Behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-<h2>5. Instagram responsive embed</h2>
-<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/BhJor38jsRO/" data-instgrm-version="8" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
-<div style="padding:8px;">
-<div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;">
-<div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div>
+
+
+<p class="has-drop-cap">Suspendisse ac mollis sem, eget molestie ligula. Aliquam vehicula lacinia magna eget porttitor. Fusce posuere magna vitae ultricies pharetra. Sed tellus lectus, viverra sed mi ut, iaculis condimentum justo. Fusce facilisis imperdiet elit quis vulputate. Duis in tincidunt libero, in laoreet libero. Nulla et nulla molestie, blandit justo eget, hendrerit eros. Ut quis viverra tortor. Etiam volutpat efficitur leo, id mollis neque. Phasellus pulvinar efficitur nibh nec laoreet. Quisque fermentum mauris nisi, ac hendrerit lectus molestie at. Quisque laoreet leo eget felis bibendum vehicula. Nulla pharetra vulputate lacinia. Vestibulum consectetur quam nulla, sed imperdiet metus suscipit vel. Quisque ut erat nisi.  <br></p>
+
+
+
+<p>Suspendisse ac mollis sem, eget molestie ligula. Aliquam vehicula lacinia magna eget porttitor. Fusce posuere magna vitae ultricies pharetra. Sed tellus lectus, viverra sed mi ut, iaculis condimentum justo. Fusce facilisis imperdiet elit quis vulputate. Duis in tincidunt libero, in laoreet libero. Nulla et nulla molestie, blandit justo eget, hendrerit eros. </p>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<blockquote style="text-align:left" class="wp-block-quote"><p>Curabitur dignissim fermentum nulla, vulputate auctor dui viverra eu. Sed libero urna, tristique ac quam sed, imperdiet placerat lectus.</p><cite><strong>&#8211; Robert Green</strong></cite></blockquote>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<figure class="wp-block-image"><img src="https://websitedemos.net/pet-care-07-wip/wp-content/uploads/sites/461/2019/06/blog07-free-img-1024x570.jpg" alt="" class="wp-image-781"/></figure>
+
+
+
+<div style="height:25px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-uagb-advanced-heading" id="uagb-adv-heading-1ca81e96-7741-49f5-8a55-ae859a698fce"><h3 class="uagb-heading-text">Curabitur dignissim fermentum nulla &#8211;</h3><p class="uagb-desc-text"></p></div>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-columns has-2-columns">
+<div class="wp-block-column">
+<h4 style="text-align:left">Nam mattis quis &#8211;</h4>
+
+
+
+<p>Nulla rutrum placerat arcu. Nulla sed accumsan lacus, vitae bibendum ex. Nam sit amet magna a lectus tempor elementum. Aliquam velit sapien, aliquet id tristique vel, congue vitae leo. Aenean at lobortis eros. </p>
+
+
+
+<p>Curabitur dignissim fermentum nulla, vulputate auctor dui viverra eu. Sed libero urna, tristique ac quam sed, imperdiet placerat lectus. Integer ut dui et urna bibendum ultrices ut egestas diam. Nulla egestas mi eget turpis tincidunt dignissim. Sed eleifend pretium porta. Nam molestie luctus eros quis aliquet.</p>
 </div>
-<p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BhJor38jsRO/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Some awesome photos for our Bimber &#8211; Viral Magazine Theme #viral #WordPress #magazine #theme</a></p>
-<p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A post shared by <a href="https://www.instagram.com/bringthepixel/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank"> Bring The Pixel</a> (@bringthepixel) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2018-04-04T13:40:56+00:00">Apr 4, 2018 at 6:40am PDT</time></p>
+
+
+
+<div class="wp-block-column">
+<div class="wp-block-uagb-advanced-heading" id="uagb-adv-heading-f6404abf-2a31-4d62-a27b-9af9cf7714df"><h2 class="uagb-heading-text"></h2><p class="uagb-desc-text"> <strong><em>Nulla rutrum placerat arcu. Nulla sed accumsan lacus, vitae bibendum ex. Nam sit amet magna a lectus tempor elementum. Aliquam velit sapien, aliquet id tristique vel, congue vitae leo.</em></strong> </p></div>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="uagb-infobox__outer-wrap" id="uagb-infobox-2142402f-b79e-4ccc-a637-f7d543fec0e9"><div class="uagb-infobox__content-wrap uagb-infobox uagb-infobox-has-icon uagb-infobox-icon-left-title uagb-infobox-left uagb-infobox-image-valign-top uagb-infobox-enable-border-radius "><div class="uagb-ifb-left-right-wrap"><div class="uagb-ifb-content"><div class="uagb-ifb-left-title-image"><div class="uagb-ifb-image-icon-content uagb-ifb-imgicon-wrap"><div class="uagb-ifb-icon-wrap"><span class="uagb-ifb-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"></path></svg></span></div></div><div class="uagb-ifb-title-wrap"><span class="uagb-ifb-title-prefix">P</span><h6 class="uagb-ifb-title">WORDS FROM AUTHOR</h6></div></div><div class="uagb-ifb-text-wrap"></div></div></div></div></div>
 </div>
-</blockquote>
-<p><script async defer src="//www.instagram.com/embed.js"></script></p>
-<p>Behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-<h2>6. Twitter responsive embed</h2>
-<blockquote class="twitter-tweet" data-width="550" data-dnt="true">
-<p lang="en" dir="ltr">Big day here at <a href="https://twitter.com/TwitterUK?ref_src=twsrc%5Etfw">@TwitterUK</a> &#8211; we&#39;re launching Moments! Look out for the lightning bolt on your account soon <img src="https://s.w.org/images/core/emoji/12.0.0-1/72x72/26a1.png" alt="⚡" class="wp-smiley" style="height: 1em; max-height: 1em;" /> <a href="https://t.co/98tqlmecpV">pic.twitter.com/98tqlmecpV</a></p>
-<p>&mdash; Twitter UK (@TwitterUK) <a href="https://twitter.com/TwitterUK/status/676689760384086016?ref_src=twsrc%5Etfw">December 15, 2015</a></p></blockquote>
-<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-<p>Behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+</div>
 ]]></content:encoded>
-							<wfw:commentRss>https://kinjoy.co/29-ridiculous-tips-for-making-the-most-of-curly-hair/feed/</wfw:commentRss>
+							<wfw:commentRss>https://kinjoy.co/20-tips-for-your-dog-training/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Tips for Smooth &#038; Silky Dog Fur</title>
+		<link>https://kinjoy.co/tips-for-smooth-silky-dog-fur/</link>
+				<comments>https://kinjoy.co/tips-for-smooth-silky-dog-fur/#respond</comments>
+				<pubDate>Wed, 26 Dec 2018 05:04:47 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+				<category><![CDATA[Grooming]]></category>
+
+		<guid isPermaLink="false">https://websitedemos.net/yoga-instructor-02/?p=319</guid>
+				<description><![CDATA[
+				Suspendisse ac mollis sem, eget molestie ligula. Aliquam vehicula lacinia magna eget porttitor. Fusce posuere magna vitae ultricies pharetra. Sed tellus lectus, viverra sed mi ut, iaculis condimentum justo. Fusce facilisis imperdiet elit quis vulputate. Duis in tincidunt libero, in laoreet libero. Nulla et nulla molestie, blandit justo eget, hendrerit eros. Ut quis viverra tortor.&#8230;		]]></description>
+								<content:encoded><![CDATA[
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p class="has-drop-cap"> Nulla facilisi. Duis vel magna turpis. Nullam rutrum urna ut metus molestie malesuada. Nulla cursus leo eu eros vestibulum mattis. Vestibulum ac augue sodales, tincidunt velit vitae, iaculis metus. Nam nec ipsum in orci convallis maximus. Vivamus in ullamcorper odio. Curabitur vitae ipsum non nisl tempor lacinia eu vitae felis. Cras sit amet laoreet nunc. Morbi rutrum sem ut sollicitudin finibus. Vivamus a laoreet lacus. Nunc et elementum urna. Sed in eros at massa scelerisque congue. Mauris ac rutrum magna.   <br></p>
+
+
+
+<p>Suspendisse ac mollis sem, eget molestie ligula. Aliquam vehicula lacinia magna eget porttitor. Fusce posuere magna vitae ultricies pharetra. Sed tellus lectus, viverra sed mi ut, iaculis condimentum justo. Fusce facilisis imperdiet elit quis vulputate. Duis in tincidunt libero, in laoreet libero. Nulla et nulla molestie, blandit justo eget, hendrerit eros. </p>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<blockquote style="text-align:left" class="wp-block-quote"><p>Curabitur dignissim fermentum nulla, vulputate auctor dui viverra eu. Sed libero urna, tristique ac quam sed, imperdiet placerat lectus.</p><cite><strong>&#8211; Robert Green</strong></cite></blockquote>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<figure class="wp-block-image"><img src="https://websitedemos.net/pet-care-07-wip/wp-content/uploads/sites/461/2018/12/blog01-free-img-1024x570.jpg" alt="" class="wp-image-329"/></figure>
+
+
+
+<div style="height:25px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-uagb-advanced-heading" id="uagb-adv-heading-d2080660-a666-4f18-a3a2-98f68d9a6b81"><h3 class="uagb-heading-text"> Etiam ante tortor, consequat  &#8211;</h3><p class="uagb-desc-text"></p></div>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-columns has-2-columns">
+<div class="wp-block-column">
+<h4 style="text-align:left">Nam mattis quis &#8211;</h4>
+
+
+
+<p>Nulla rutrum placerat arcu. Nulla sed accumsan lacus, vitae bibendum ex. Nam sit amet magna a lectus tempor elementum. Aliquam velit sapien, aliquet id tristique vel, congue vitae leo. Aenean at lobortis eros. </p>
+</div>
+
+
+
+<div class="wp-block-column">
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>Curabitur dignissim fermentum nulla, vulputate auctor dui viverra eu. Sed libero urna, tristique ac quam sed, imperdiet placerat lectus. Integer ut dui et urna bibendum ultrices ut egestas diam. Nulla egestas mi eget turpis tincidunt dignissim. Sed eleifend pretium porta. Nam molestie luctus eros quis aliquet.</p>
+</div>
+</div>
+]]></content:encoded>
+							<wfw:commentRss>https://kinjoy.co/tips-for-smooth-silky-dog-fur/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>How to Choose Puppy Food?</title>
+		<link>https://kinjoy.co/how-to-choose-puppy-food/</link>
+				<comments>https://kinjoy.co/how-to-choose-puppy-food/#respond</comments>
+				<pubDate>Wed, 26 Dec 2018 05:02:53 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+				<category><![CDATA[Food & Diet]]></category>
+
+		<guid isPermaLink="false">https://websitedemos.net/yoga-instructor-02/?p=316</guid>
+				<description><![CDATA[
+				Suspendisse ac mollis sem, eget molestie ligula. Aliquam vehicula lacinia magna eget porttitor. Fusce posuere magna vitae ultricies pharetra. Sed tellus lectus, viverra sed mi ut, iaculis condimentum justo. Fusce facilisis imperdiet elit quis vulputate. Duis in tincidunt libero, in laoreet libero. Nulla et nulla molestie, blandit justo eget, hendrerit eros. Ut quis viverra tortor.&#8230;		]]></description>
+								<content:encoded><![CDATA[
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p class="has-drop-cap">Suspendisse ac mollis sem, eget molestie ligula. Aliquam vehicula lacinia magna eget porttitor. Fusce posuere magna vitae ultricies pharetra. Sed tellus lectus, viverra sed mi ut, iaculis condimentum justo. Fusce facilisis imperdiet elit quis vulputate. Duis in tincidunt libero, in laoreet libero. Nulla et nulla molestie, blandit justo eget, hendrerit eros. Ut quis viverra tortor. Etiam volutpat efficitur leo, id mollis neque. Phasellus pulvinar efficitur nibh nec laoreet. Quisque fermentum mauris nisi, ac hendrerit lectus molestie at. Quisque laoreet leo eget felis bibendum vehicula. Nulla pharetra vulputate lacinia. Vestibulum consectetur quam nulla, sed imperdiet metus suscipit vel. Quisque ut erat nisi.  <br></p>
+
+
+
+<p>Suspendisse ac mollis sem, eget molestie ligula. Aliquam vehicula lacinia magna eget porttitor. Fusce posuere magna vitae ultricies pharetra. Sed tellus lectus, viverra sed mi ut, iaculis condimentum justo. Fusce facilisis imperdiet elit quis vulputate. Duis in tincidunt libero, in laoreet libero. Nulla et nulla molestie, blandit justo eget, hendrerit eros. </p>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<blockquote style="text-align:left" class="wp-block-quote"><p>Curabitur dignissim fermentum nulla, vulputate auctor dui viverra eu. Sed libero urna, tristique ac quam sed, imperdiet placerat lectus.</p><cite><strong>&#8211; Robert Green</strong></cite></blockquote>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<figure class="wp-block-image"><img src="https://websitedemos.net/pet-care-07-wip/wp-content/uploads/sites/461/2018/12/blog02-free-img-1024x570.jpg" alt="" class="wp-image-332"/></figure>
+
+
+
+<div style="height:25px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-uagb-advanced-heading" id="uagb-adv-heading-e983d36e-e6ba-4ed6-9f3d-36ab03d0f917"><h3 class="uagb-heading-text">Curabitur dignissim fermentum nulla &#8211;</h3><p class="uagb-desc-text"></p></div>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-columns has-2-columns">
+<div class="wp-block-column">
+<h4 style="text-align:left">Nam mattis quis &#8211;</h4>
+
+
+
+<p>Nulla rutrum placerat arcu. Nulla sed accumsan lacus, vitae bibendum ex. Nam sit amet magna a lectus tempor elementum. Aliquam velit sapien, aliquet id tristique vel, congue vitae leo. Aenean at lobortis eros. </p>
+
+
+
+<p>Curabitur dignissim fermentum nulla, vulputate auctor dui viverra eu. Sed libero urna, tristique ac quam sed, imperdiet placerat lectus. Integer ut dui et urna bibendum ultrices ut egestas diam. Nulla egestas mi eget turpis tincidunt dignissim. Sed eleifend pretium porta. Nam molestie luctus eros quis aliquet.</p>
+</div>
+
+
+
+<div class="wp-block-column">
+<div class="wp-block-uagb-advanced-heading" id="uagb-adv-heading-db872432-310e-40a0-aa74-ccc5377d4dc0"><h2 class="uagb-heading-text"></h2><p class="uagb-desc-text"> <strong><em>Nulla rutrum placerat arcu. Nulla sed accumsan lacus, vitae bibendum ex. Nam sit amet magna a lectus tempor elementum. Aliquam velit sapien, aliquet id tristique vel, congue vitae leo.</em></strong> </p></div>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="uagb-infobox__outer-wrap" id="uagb-infobox-b5d90631-d377-4d87-a283-71bc499ab6e6"><div class="uagb-infobox__content-wrap uagb-infobox uagb-infobox-has-icon uagb-infobox-icon-left-title uagb-infobox-left uagb-infobox-image-valign-top uagb-infobox-enable-border-radius "><div class="uagb-ifb-left-right-wrap"><div class="uagb-ifb-content"><div class="uagb-ifb-left-title-image"><div class="uagb-ifb-image-icon-content uagb-ifb-imgicon-wrap"><div class="uagb-ifb-icon-wrap"><span class="uagb-ifb-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"></path></svg></span></div></div><div class="uagb-ifb-title-wrap"><span class="uagb-ifb-title-prefix">P</span><h6 class="uagb-ifb-title">WORDS FROM AUTHOR</h6></div></div><div class="uagb-ifb-text-wrap"></div></div></div></div></div>
+</div>
+</div>
+]]></content:encoded>
+							<wfw:commentRss>https://kinjoy.co/how-to-choose-puppy-food/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Healthy Donut Recipes for Your Pets</title>
+		<link>https://kinjoy.co/healthy-donut-recipes-for-your-pets/</link>
+				<comments>https://kinjoy.co/healthy-donut-recipes-for-your-pets/#respond</comments>
+				<pubDate>Wed, 26 Dec 2018 05:01:07 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+				<category><![CDATA[Food & Diet]]></category>
+
+		<guid isPermaLink="false">https://websitedemos.net/yoga-instructor-02/?p=314</guid>
+				<description><![CDATA[
+				Suspendisse ac mollis sem, eget molestie ligula. Aliquam vehicula lacinia magna eget porttitor. Fusce posuere magna vitae ultricies pharetra. Sed tellus lectus, viverra sed mi ut, iaculis condimentum justo. Fusce facilisis imperdiet elit quis vulputate. Duis in tincidunt libero, in laoreet libero. Nulla et nulla molestie, blandit justo eget, hendrerit eros. Ut quis viverra tortor.&#8230;		]]></description>
+								<content:encoded><![CDATA[
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p class="has-drop-cap"> Cras ornare ultricies lorem, eu sodales metus dapibus quis. Vivamus semper sem et semper scelerisque. Nunc nec consequat nulla. Mauris eget purus ante. Aenean facilisis eu massa sed tincidunt. Donec accumsan vitae nulla ac aliquam. Aliquam at purus ac magna volutpat aliquet a et arcu. Quisque sem mauris, rutrum convallis mollis a, dignissim ut odio. Mauris faucibus tellus a finibus ultricies. Phasellus quis ultricies augue, eu pellentesque quam. <br></p>
+
+
+
+<p>Suspendisse ac mollis sem, eget molestie ligula. Aliquam vehicula lacinia magna eget porttitor. Fusce posuere magna vitae ultricies pharetra. Sed tellus lectus, viverra sed mi ut, iaculis condimentum justo. Fusce facilisis imperdiet elit quis vulputate. Duis in tincidunt libero, in laoreet libero. Nulla et nulla molestie, blandit justo eget, hendrerit eros. </p>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<blockquote style="text-align:left" class="wp-block-quote"><p>Curabitur dignissim fermentum nulla, vulputate auctor dui viverra eu. Sed libero urna, tristique ac quam sed, imperdiet placerat lectus.</p><cite><strong>&#8211; Robert Green</strong></cite></blockquote>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<figure class="wp-block-image"><img src="https://websitedemos.net/pet-care-07-wip/wp-content/uploads/sites/461/2018/12/blog03-free-img-1024x570.jpg" alt="" class="wp-image-336"/></figure>
+
+
+
+<div style="height:25px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-uagb-advanced-heading" id="uagb-adv-heading-58b86c7f-3159-4129-95b4-fbd40386c79d"><h3 class="uagb-heading-text"> Sed semper nunc eu maximus semper &#8211;</h3><p class="uagb-desc-text"></p></div>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-columns has-2-columns">
+<div class="wp-block-column">
+<h4 style="text-align:left">Nam mattis quis &#8211;</h4>
+
+
+
+<p>Nulla rutrum placerat arcu. Nulla sed accumsan lacus, vitae bibendum ex. Nam sit amet magna a lectus tempor elementum. Aliquam velit sapien, aliquet id tristique vel, congue vitae leo. Aenean at lobortis eros. </p>
+
+
+
+<p>Curabitur dignissim fermentum nulla, vulputate auctor dui viverra eu. Sed libero urna, tristique ac quam sed, imperdiet placerat lectus. Integer ut dui et urna bibendum ultrices ut egestas diam. Nulla egestas mi eget turpis tincidunt dignissim. Sed eleifend pretium porta. Nam molestie luctus eros quis aliquet.</p>
+</div>
+
+
+
+<div class="wp-block-column">
+<div class="wp-block-uagb-advanced-heading" id="uagb-adv-heading-e93af6a9-cf5e-45fb-a0fe-afdc53985e7f"><h2 class="uagb-heading-text"></h2><p class="uagb-desc-text"> <strong><em>Nulla rutrum placerat arcu. Nulla sed accumsan lacus, vitae bibendum ex. Nam sit amet magna a lectus tempor elementum. Aliquam velit sapien, aliquet id tristique vel, congue vitae leo.</em></strong> </p></div>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="uagb-infobox__outer-wrap" id="uagb-infobox-7f64a829-86f0-437b-b212-deca820638b6"><div class="uagb-infobox__content-wrap uagb-infobox uagb-infobox-has-icon uagb-infobox-icon-left-title uagb-infobox-left uagb-infobox-image-valign-top uagb-infobox-enable-border-radius "><div class="uagb-ifb-left-right-wrap"><div class="uagb-ifb-content"><div class="uagb-ifb-left-title-image"><div class="uagb-ifb-image-icon-content uagb-ifb-imgicon-wrap"><div class="uagb-ifb-icon-wrap"><span class="uagb-ifb-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"></path></svg></span></div></div><div class="uagb-ifb-title-wrap"><span class="uagb-ifb-title-prefix">P</span><h6 class="uagb-ifb-title">WORDS FROM AUTHOR</h6></div></div><div class="uagb-ifb-text-wrap"></div></div></div></div></div>
+</div>
+</div>
+]]></content:encoded>
+							<wfw:commentRss>https://kinjoy.co/healthy-donut-recipes-for-your-pets/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Top Tips for Grooming Your Pup!</title>
+		<link>https://kinjoy.co/top-tips-for-grooming-your-pup/</link>
+				<comments>https://kinjoy.co/top-tips-for-grooming-your-pup/#respond</comments>
+				<pubDate>Wed, 26 Dec 2018 04:59:04 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+				<category><![CDATA[Grooming]]></category>
+
+		<guid isPermaLink="false">https://websitedemos.net/yoga-instructor-02/?p=312</guid>
+				<description><![CDATA[
+				Suspendisse ac mollis sem, eget molestie ligula. Aliquam vehicula lacinia magna eget porttitor. Fusce posuere magna vitae ultricies pharetra. Sed tellus lectus, viverra sed mi ut, iaculis condimentum justo. Fusce facilisis imperdiet elit quis vulputate. Duis in tincidunt libero, in laoreet libero. Nulla et nulla molestie, blandit justo eget, hendrerit eros. Ut quis viverra tortor.&#8230;		]]></description>
+								<content:encoded><![CDATA[
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p class="has-drop-cap"> Nam iaculis tristique eros id fringilla. Pellentesque dui nulla, ullamcorper id ullamcorper vitae, tristique non risus. Integer viverra dolor ut porta egestas. Sed consequat gravida neque vitae feugiat. Vivamus auctor semper eros, ut blandit ligula semper non. Suspendisse vel nunc id turpis rhoncus mollis. Donec faucibus tristique tortor,  Etiam volutpat efficitur leo, id mollis neque. Phasellus pulvinar efficitur nibh nec laoreet. Quisque fermentum mauris nisi, ac hendrerit lectus molestie at. Quisque laoreet leo eget felis bibendum vehicula. Nulla pharetra vulputate lacinia. Vestibulum consectetur quam nulla, sed imperdiet metus suscipit vel. Quisque ut erat nisi.  <br></p>
+
+
+
+<p>Suspendisse ac mollis sem, eget molestie ligula. Aliquam vehicula lacinia magna eget porttitor. Fusce posuere magna vitae ultricies pharetra. Sed tellus lectus, viverra sed mi ut, iaculis condimentum justo. Fusce facilisis imperdiet elit quis vulputate. Duis in tincidunt libero, in laoreet libero. Nulla et nulla molestie, blandit justo eget, hendrerit eros. </p>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<blockquote style="text-align:left" class="wp-block-quote"><p>Curabitur dignissim fermentum nulla, vulputate auctor dui viverra eu. Sed libero urna, tristique ac quam sed, imperdiet placerat lectus.</p><cite><strong>&#8211; Robert Green</strong></cite></blockquote>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<figure class="wp-block-image"><img src="https://websitedemos.net/pet-care-07-wip/wp-content/uploads/sites/461/2018/12/blog04-free-img-1024x570.jpg" alt="" class="wp-image-339"/></figure>
+
+
+
+<div style="height:25px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-uagb-advanced-heading" id="uagb-adv-heading-ff0c9df7-7b00-4a0e-9d08-18cfc879f0b2"><h3 class="uagb-heading-text"> Aenean fermentum quis nisl  &#8211;</h3><p class="uagb-desc-text"></p></div>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-columns has-2-columns">
+<div class="wp-block-column">
+<h4 style="text-align:left">Nam mattis quis &#8211;</h4>
+
+
+
+<p>Nulla rutrum placerat arcu. Nulla sed accumsan lacus, vitae bibendum ex. Nam sit amet magna a lectus tempor elementum. Aliquam velit sapien, aliquet id tristique vel, congue vitae leo. Aenean at lobortis eros. </p>
+
+
+
+<p>Curabitur dignissim fermentum nulla, vulputate auctor dui viverra eu. Sed libero urna, tristique ac quam sed, imperdiet placerat lectus. Integer ut dui et urna bibendum ultrices ut egestas diam. Nulla egestas mi eget turpis tincidunt dignissim. Sed eleifend pretium porta. Nam molestie luctus eros quis aliquet.</p>
+</div>
+
+
+
+<div class="wp-block-column">
+<div class="wp-block-uagb-advanced-heading" id="uagb-adv-heading-72e200b0-659f-43d2-b691-ac10977875c4"><h2 class="uagb-heading-text"></h2><p class="uagb-desc-text"> <strong><em>Nulla rutrum placerat arcu. Nulla sed accumsan lacus, vitae bibendum ex. Nam sit amet magna a lectus tempor elementum. Aliquam velit sapien, aliquet id tristique vel, congue vitae leo.</em></strong> </p></div>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="uagb-infobox__outer-wrap" id="uagb-infobox-a3021fc0-def0-4a88-8eb1-797030870e41"><div class="uagb-infobox__content-wrap uagb-infobox uagb-infobox-has-icon uagb-infobox-icon-left-title uagb-infobox-left uagb-infobox-image-valign-top uagb-infobox-enable-border-radius "><div class="uagb-ifb-left-right-wrap"><div class="uagb-ifb-content"><div class="uagb-ifb-left-title-image"><div class="uagb-ifb-image-icon-content uagb-ifb-imgicon-wrap"><div class="uagb-ifb-icon-wrap"><span class="uagb-ifb-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"></path></svg></span></div></div><div class="uagb-ifb-title-wrap"><span class="uagb-ifb-title-prefix">P</span><h6 class="uagb-ifb-title">WORDS FROM AUTHOR</h6></div></div><div class="uagb-ifb-text-wrap"></div></div></div></div></div>
+</div>
+</div>
+]]></content:encoded>
+							<wfw:commentRss>https://kinjoy.co/top-tips-for-grooming-your-pup/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Surprise Your Pup On His Birthday</title>
+		<link>https://kinjoy.co/surprise-your-pup-on-his-birthday/</link>
+				<comments>https://kinjoy.co/surprise-your-pup-on-his-birthday/#respond</comments>
+				<pubDate>Wed, 26 Dec 2018 04:57:08 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+				<category><![CDATA[Food & Diet]]></category>
+
+		<guid isPermaLink="false">https://websitedemos.net/yoga-instructor-02/?p=309</guid>
+				<description><![CDATA[
+				Suspendisse ac mollis sem, eget molestie ligula. Aliquam vehicula lacinia magna eget porttitor. Fusce posuere magna vitae ultricies pharetra. Sed tellus lectus, viverra sed mi ut, iaculis condimentum justo. Fusce facilisis imperdiet elit quis vulputate. Duis in tincidunt libero, in laoreet libero. Nulla et nulla molestie, blandit justo eget, hendrerit eros. Ut quis viverra tortor.&#8230;		]]></description>
+								<content:encoded><![CDATA[
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p class="has-drop-cap"> Donec turpis elit, dapibus sed justo sit amet, dignissim lacinia erat. Etiam a suscipit augue. Donec eleifend urna eget lectus pulvinar, sodales laoreet massa vestibulum. Integer egestas consequat turpis, non tincidunt risus gravida quis. Phasellus tincidunt laoreet sollicitudin. Nam euismod vitae eros sed gravida. Aenean fermentum ac diam mattis ullamcorper. Fusce elementum orci in aliquet efficitur. Curabitur et varius est. Aliquam vitae vulputate turpis, vel eleifend neque. Aliquam erat volutpat. Suspendisse convallis augue velit, et pretium mauris dignissim in. <br></p>
+
+
+
+<p>Suspendisse ac mollis sem, eget molestie ligula. Aliquam vehicula lacinia magna eget porttitor. Fusce posuere magna vitae ultricies pharetra. Sed tellus lectus, viverra sed mi ut, iaculis condimentum justo. Fusce facilisis imperdiet elit quis vulputate. Duis in tincidunt libero, in laoreet libero. Nulla et nulla molestie, blandit justo eget, hendrerit eros. </p>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<blockquote style="text-align:left" class="wp-block-quote"><p>Curabitur dignissim fermentum nulla, vulputate auctor dui viverra eu. Sed libero urna, tristique ac quam sed, imperdiet placerat lectus.</p><cite><strong>&#8211; Robert Green</strong></cite></blockquote>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<figure class="wp-block-image"><img src="https://websitedemos.net/pet-care-07-wip/wp-content/uploads/sites/461/2018/12/blog05-free-img-1024x570.jpg" alt="" class="wp-image-343"/></figure>
+
+
+
+<div style="height:25px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-uagb-advanced-heading" id="uagb-adv-heading-c3e98138-3285-4e05-ad1e-216c67515958"><h3 class="uagb-heading-text"> Vestibulum ante ipsum primis &#8211;</h3><p class="uagb-desc-text"></p></div>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-columns has-2-columns">
+<div class="wp-block-column">
+<h4 style="text-align:left">Nam mattis quis &#8211;</h4>
+
+
+
+<p>Nulla rutrum placerat arcu. Nulla sed accumsan lacus, vitae bibendum ex. Nam sit amet magna a lectus tempor elementum. Aliquam velit sapien, aliquet id tristique vel, congue vitae leo. Aenean at lobortis eros. </p>
+
+
+
+<p>Curabitur dignissim fermentum nulla, vulputate auctor dui viverra eu. Sed libero urna, tristique ac quam sed, imperdiet placerat lectus. Integer ut dui et urna bibendum ultrices ut egestas diam. Nulla egestas mi eget turpis tincidunt dignissim. Sed eleifend pretium porta. Nam molestie luctus eros quis aliquet.</p>
+</div>
+
+
+
+<div class="wp-block-column">
+<div class="wp-block-uagb-advanced-heading" id="uagb-adv-heading-69ae9f18-1b6a-4d76-881b-d714345d5529"><h2 class="uagb-heading-text"></h2><p class="uagb-desc-text"> <strong><em>Nulla rutrum placerat arcu. Nulla sed accumsan lacus, vitae bibendum ex. Nam sit amet magna a lectus tempor elementum. Aliquam velit sapien, aliquet id tristique vel, congue vitae leo.</em></strong> </p></div>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="uagb-infobox__outer-wrap" id="uagb-infobox-fbc5ec67-94aa-4e09-a3c2-2601eb02b1b3"><div class="uagb-infobox__content-wrap uagb-infobox uagb-infobox-has-icon uagb-infobox-icon-left-title uagb-infobox-left uagb-infobox-image-valign-top uagb-infobox-enable-border-radius "><div class="uagb-ifb-left-right-wrap"><div class="uagb-ifb-content"><div class="uagb-ifb-left-title-image"><div class="uagb-ifb-image-icon-content uagb-ifb-imgicon-wrap"><div class="uagb-ifb-icon-wrap"><span class="uagb-ifb-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"></path></svg></span></div></div><div class="uagb-ifb-title-wrap"><span class="uagb-ifb-title-prefix">P</span><h6 class="uagb-ifb-title">WORDS FROM AUTHOR</h6></div></div><div class="uagb-ifb-text-wrap"></div></div></div></div></div>
+</div>
+</div>
+]]></content:encoded>
+							<wfw:commentRss>https://kinjoy.co/surprise-your-pup-on-his-birthday/feed/</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+							</item>
+		<item>
+		<title>Benefits of Exercising with Your Dog</title>
+		<link>https://kinjoy.co/benefits-of-exercising-with-your-dog/</link>
+				<comments>https://kinjoy.co/benefits-of-exercising-with-your-dog/#respond</comments>
+				<pubDate>Mon, 24 Dec 2018 12:31:39 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+				<category><![CDATA[Training]]></category>
+
+		<guid isPermaLink="false">https://websitedemos.net/yoga-instructor-02/?p=199</guid>
+				<description><![CDATA[Suspendisse ac mollis sem, eget molestie ligula. Aliquam vehicula lacinia magna eget porttitor. Fusce posuere magna vitae ultricies pharetra. Sed tellus lectus, viverra sed mi ut, iaculis condimentum justo. Fusce facilisis imperdiet elit quis vulputate. Duis in tincidunt libero, in laoreet libero. 
+						]]></description>
+								<content:encoded><![CDATA[
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p class="has-drop-cap">Suspendisse ac mollis sem, eget molestie ligula. Aliquam vehicula lacinia magna eget porttitor. Fusce posuere magna vitae ultricies pharetra. Sed tellus lectus, viverra sed mi ut, iaculis condimentum justo. Fusce facilisis imperdiet elit quis vulputate. Duis in tincidunt libero, in laoreet libero. Nulla et nulla molestie, blandit justo eget, hendrerit eros. Ut quis viverra tortor. Etiam volutpat efficitur leo, id mollis neque. Phasellus pulvinar efficitur nibh nec laoreet. Quisque fermentum mauris nisi, ac hendrerit lectus molestie at. Quisque laoreet leo eget felis bibendum vehicula. Nulla pharetra vulputate lacinia. Vestibulum consectetur quam nulla, sed imperdiet metus suscipit vel. Quisque ut erat nisi.  <br></p>
+
+
+
+<p>Suspendisse ac mollis sem, eget molestie ligula. Aliquam vehicula lacinia magna eget porttitor. Fusce posuere magna vitae ultricies pharetra. Sed tellus lectus, viverra sed mi ut, iaculis condimentum justo. Fusce facilisis imperdiet elit quis vulputate. Duis in tincidunt libero, in laoreet libero. Nulla et nulla molestie, blandit justo eget, hendrerit eros. </p>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<blockquote style="text-align:left" class="wp-block-quote"><p>Curabitur dignissim fermentum nulla, vulputate auctor dui viverra eu. Sed libero urna, tristique ac quam sed, imperdiet placerat lectus.</p><cite><strong>&#8211; Robert Green</strong></cite></blockquote>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<figure class="wp-block-image"><img src="https://websitedemos.net/pet-care-07-wip/wp-content/uploads/sites/461/2018/12/blog06-free-img-1024x570.jpg" alt="" class="wp-image-346"/></figure>
+
+
+
+<div style="height:25px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-uagb-advanced-heading" id="uagb-adv-heading-7aea1097-2c2c-408e-9205-d0ab1b22e108"><h3 class="uagb-heading-text">Curabitur dignissim fermentum nulla &#8211;</h3><p class="uagb-desc-text"></p></div>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="wp-block-columns has-2-columns">
+<div class="wp-block-column">
+<h4 style="text-align:left">Nam mattis quis &#8211;</h4>
+
+
+
+<p>Nulla rutrum placerat arcu. Nulla sed accumsan lacus, vitae bibendum ex. Nam sit amet magna a lectus tempor elementum. Aliquam velit sapien, aliquet id tristique vel, congue vitae leo. Aenean at lobortis eros. </p>
+
+
+
+<p>Curabitur dignissim fermentum nulla, vulputate auctor dui viverra eu. Sed libero urna, tristique ac quam sed, imperdiet placerat lectus. Integer ut dui et urna bibendum ultrices ut egestas diam. Nulla egestas mi eget turpis tincidunt dignissim. Sed eleifend pretium porta. Nam molestie luctus eros quis aliquet.</p>
+</div>
+
+
+
+<div class="wp-block-column">
+<div class="wp-block-uagb-advanced-heading" id="uagb-adv-heading-c465e5a1-7ef3-480d-9568-9bdccfc04664"><h2 class="uagb-heading-text"></h2><p class="uagb-desc-text"> <strong><em>Nulla rutrum placerat arcu. Nulla sed accumsan lacus, vitae bibendum ex. Nam sit amet magna a lectus tempor elementum. Aliquam velit sapien, aliquet id tristique vel, congue vitae leo.</em></strong> </p></div>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<div class="uagb-infobox__outer-wrap" id="uagb-infobox-1a436bbe-5b9c-428f-8f8a-01deb5512d86"><div class="uagb-infobox__content-wrap uagb-infobox uagb-infobox-has-icon uagb-infobox-icon-left-title uagb-infobox-left uagb-infobox-image-valign-top uagb-infobox-enable-border-radius "><div class="uagb-ifb-left-right-wrap"><div class="uagb-ifb-content"><div class="uagb-ifb-left-title-image"><div class="uagb-ifb-image-icon-content uagb-ifb-imgicon-wrap"><div class="uagb-ifb-icon-wrap"><span class="uagb-ifb-icon"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><path d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"></path></svg></span></div></div><div class="uagb-ifb-title-wrap"><span class="uagb-ifb-title-prefix">P</span><h6 class="uagb-ifb-title">WORDS FROM AUTHOR</h6></div></div><div class="uagb-ifb-text-wrap"></div></div></div></div></div>
+</div>
+</div>
+]]></content:encoded>
+							<wfw:commentRss>https://kinjoy.co/benefits-of-exercising-with-your-dog/feed/</wfw:commentRss>
 		<slash:comments>0</slash:comments>
 							</item>
 	</channel>
 </rss>
-
-<!--
-Performance optimized by W3 Total Cache. Learn more: https://www.w3-edge.com/products/
-
-Object Caching 156/196 objects using disk
-Page Caching using disk: enhanced (Page is feed) 
-Lazy Loading (feed)
-Minified using disk
-Database Caching 47/57 queries in 0.045 seconds using disk
-
-Served from: blueprintgpapcopy.local @ 2020-01-31 07:00:39 by W3 Total Cache
--->
