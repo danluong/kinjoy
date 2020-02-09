@@ -1,0 +1,18 @@
+{
+  "footer-1": {
+    "text-7": {
+      "title": "About",
+      "text": "<ul>\r\n<li>A GeneratePress Site</li>\r\n<li>No Plugins. No Builder</li>\r\n<li>Page Hero. Custom Navigation. Author Box</li>\r\n<li>Love GeneratePress</li>\r\n</ul>\r\n<br>\r\n<h2>volume</h2>",
+      "filter": true,
+      "visual": true
+    }
+  },
+  "footer-2": {
+    "recent-posts-8": []
+  },
+  "footer-3": {
+    "search-14": {
+      "title": "Looking for something"
+    }
+  }
+}
